@@ -31,6 +31,12 @@ to February 1982, to see if it matches. The assumed need for this is in less dem
 than the present becoming future, since the latter is where life takes place, but it's
 on the to do list.
 
+# Graph
+
+This is a graph of the trend line over an increasing number of samples back, as seen in the "more advanced" example below.
+
+![excel-snp500-example-graph](/SnP500/Images/Get-SnP500Trend-example-excel-graph.jpg)
+
 # Examples
 
 ## Basic
@@ -165,3 +171,7 @@ SamplesBack        Rate
         490 2594.611629
         500 2594.812072
 ```
+
+And here's a graph of the same:
+
+![excel-snp500-example-graph](/SnP500/Images/Get-SnP500Trend-example-excel-graph.jpg)
