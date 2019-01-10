@@ -16,7 +16,7 @@ the "next step", then include that in the new, resulting set, and repeat this pr
 once for each prediction wanted ahead, before returning the numbers that are presented to you.
 
 I would call this a mathematical trend-line-predictive, dynamically adaptive algorithm for the
-US S&P 500 Stock Exchange future development. How accurate it is remains highly debatable. In my
+US S&P 500 Stock Index' future development. How accurate it is remains highly debatable. In my
 own opinion it is simply an indicator - and a quite weak one. It completely ignores everything
 but the math/numbers, but then again the graphs with sliding averages and such often seem
 eerily accurate. Use it at your own will.
