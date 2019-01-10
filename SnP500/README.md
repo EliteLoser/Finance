@@ -1,7 +1,7 @@
 # Predict how the S&P US stock index develops short-term
 
 Get the S & P 500 US index trend based on an arbitrary sample count back in time
-and an arbitrary number of dynamically adaptive predictions ahead.
+and an arbitrary number of dynamically adaptive predictions ahead (to the degree the data samples and laws of nature allows).
 
 Yahoo Finance CSV data is used, so that's where you get the CSV file:
 https://finance.yahoo.com/quote/%5EGSPC/history/
