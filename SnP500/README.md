@@ -99,7 +99,11 @@ Date                Rate        Count
 
 ## More advanced
 
-Here I predict the rate of the S&P index 10 working days from now based on 10, 20, 30 ... to ... 490, 500 samples.
+Here I predict the rate of the S&P index 10 working days from now based on 10, 20, 30 ... to ... 490, 500 samples. First I export it to CSV in the screenshot, then I demonstrate how to show it "live" in the text example.
+
+![snp500-example](/SnP500/Images/Get-SnP500Trend-example.jpg)
+
+Text example:
 
 ```
 PS C:\temp> 1..500 | Where { $_ % 10 -eq 0 } | foreach {
