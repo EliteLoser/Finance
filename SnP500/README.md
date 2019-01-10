@@ -28,7 +28,7 @@ to calculate, except (at least) one flaw, in that I only focus on the *latest* m
 this tool is currently not suited for "retro-analysis", meaning looking at periods 
 back in time, and omitting the present, predicting from, say January 1982
 to February 1982, to see if it matches. The assumed need for this is in less demand
-than the present becoming future, since the latter is where life takes place, but it's
+than the present becoming future, since the latter is where life will take place, but it's
 on the to do list.
 
 # Graph
