@@ -175,3 +175,39 @@ SamplesBack        Rate
 And here's a graph of the same:
 
 ![excel-snp500-example-graph](/SnP500/Images/Get-SnP500Trend-example-excel-graph.jpg)
+
+## With 1-10 predictions ahead for 10 and 20 samples back
+
+```
+PS C:\temp> 10, 20 | foreach {
+    foreach ($p in 1..10) { 
+        [PSCustomObject] @{
+            SamplesBack = $_
+            Rate = (Get-SnP500Trend -FilePath .\^GSPC.csv -SamplesBackCount $_ `
+        -PredictionsAheadCount $p | select -Last 1).Rate
+            PredictionCount = $p } } }
+
+SamplesBack        Rate PredictionCount
+-----------        ---- ---------------
+         10 2597.004071               1
+         10 2609.773521               2
+         10 2622.961437               3
+         10 2636.402271               4
+         10 2650.002083               5
+         10 2663.705230               6
+         10 2677.477521               7
+         10 2691.297263               8
+         10 2705.150305               9
+         10 2719.027182              10
+         20 2580.701056               1
+         20 2577.732937               2
+         20 2575.734184               3
+         20 2574.472991               4
+         20 2573.779720               5
+         20 2573.528554               6
+         20 2573.625027               7
+         20 2573.997403               8
+         20 2574.590638               9
+         20 2575.362083              10
+```
+
