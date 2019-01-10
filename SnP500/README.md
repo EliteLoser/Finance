@@ -31,9 +31,9 @@ to February 1982, to see if it matches. The assumed need for this is in less dem
 than the present becoming future, since the latter is where life takes place, but it's
 on the to do list.
 
-#Examples
+# Examples
 
-##Basic
+## Basic
 
 Based on 10 samples back and making 10 predictions ahead. Tip! Use " | Select-Object -Last 30" for only the last 30 results if basing it on a lot of samples back or making a lot of predictions ahead, and not wanting to see all the clutter.
 
@@ -97,7 +97,7 @@ Date                Rate        Count
 2019-01-10 03:57:58 2575.362083    30
 ```
 
-##More advanced
+## More advanced
 
 Here I predict the rate of the S&P index 10 working days from now based on 10, 20, 30 ... to ... 490, 500 samples.
 
