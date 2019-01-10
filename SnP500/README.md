@@ -1,4 +1,4 @@
-# Predict how the S & P US stock index develops short-term
+# Predict how the S&P US stock index develops short-term
 
 Get the S & P 500 US index trend based on an arbitrary sample count back in time
 and an arbitrary number of dynamically adaptive predictions ahead.
