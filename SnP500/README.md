@@ -299,3 +299,7 @@ SamplesBack        Rate PredictionCount
          10 2737.819851              10
           5 2753.873020              10
 ```
+
+Here is a graph of the same, showing it sorted by samples back in time and rates represented in the bars. The short term trend is positive at the moment of writing/testing.
+
+![snp500-excel-graph-prediction](/SnP500/Images/Get-SnP500Trend-example-excel-graph2.jpg)
