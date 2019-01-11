@@ -264,3 +264,38 @@ SamplesBack        Rate PredictionCount
           6 3014.208302              20
           5 3148.523156              20
 ```
+
+## Every fifth sample 100 days back, 10 predictions ahead
+
+```
+PS C:\temp> 2..100 | Where { $_ % 5 -eq 0 } | foreach {
+    foreach ($p in 10) { 
+        [PSCustomObject] @{
+            SamplesBack = $_
+            Rate = (Get-SnP500Trend -FilePath .\^GSPC.csv -SamplesBackCount $_ `
+        -PredictionsAheadCount $p | select -Last 1).Rate
+            PredictionCount = $p } } } | sort PredictionCount, Rate, SamplesBack | ft -a 
+
+SamplesBack        Rate PredictionCount
+-----------        ---- ---------------
+         30 2533.977397              10
+         45 2537.579240              10
+         40 2541.423615              10
+         35 2542.854414              10
+         80 2545.390241              10
+         75 2545.529407              10
+         50 2545.964568              10
+         85 2546.912401              10
+         70 2547.362695              10
+         90 2548.947546              10
+         95 2550.859942              10
+         65 2551.726017              10
+         55 2552.192190              10
+         60 2552.197674              10
+        100 2553.902403              10
+         25 2563.330683              10
+         20 2610.464246              10
+         15 2716.226041              10
+         10 2737.819851              10
+          5 2753.873020              10
+```
