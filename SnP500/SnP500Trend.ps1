@@ -69,7 +69,9 @@ function Get-SnP500Trend {
             Copyright (C) Joakim Borger Svendsen, Svendsen Tech.
             All rights reserved.
 
-            GNU Public license v3.
+            GNU General Public License v3.
+            
+            GitHub here: https://github.com/EliteLoser/Finance/blob/master/SnP500/
 
         .DESCRIPTION
             
@@ -136,7 +138,7 @@ function Get-SnP500Trend {
             settings are used for the number format.
 
         .LINK
-            
+            https://github.com/EliteLoser/Finance/blob/master/SnP500/
     #>
     [CmdletBinding()]
     Param(
