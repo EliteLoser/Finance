@@ -1,5 +1,5 @@
 function Get-TrendLine {
-<#
+    <#
     .SYNOPSIS   
         Calculate the linear trend line from a series of numbers
 
@@ -28,8 +28,8 @@ function Get-TrendLine {
 
     .EXAMPLE  
         Get-Trendline -Data @(15, 16, 12, 11, 14, 8, 10)
-#>
-    param ([System.Object[]] $Data)
+    #>
+    Param ([System.Object[]] $Data)
     
     [Decimal] $n = $Data.Count
     [Decimal] $SumX = 0
@@ -69,9 +69,7 @@ function Get-SnP500Trend {
             Copyright (C) Joakim Borger Svendsen, Svendsen Tech.
             All rights reserved.
 
-            GNU General Public License v3.
-            
-            GitHub here: https://github.com/EliteLoser/Finance/blob/master/SnP500/
+            GNU Public license v3.
 
         .DESCRIPTION
             
@@ -138,7 +136,7 @@ function Get-SnP500Trend {
             settings are used for the number format.
 
         .LINK
-            https://github.com/EliteLoser/Finance/blob/master/SnP500/
+            
     #>
     [CmdletBinding()]
     Param(
@@ -176,7 +174,7 @@ function Get-SnP500Trend {
             # Not accounting for weekends/holidays, just tagging with "now".
             $Rates += @([PSCustomObject] @{
                 $RateHeader = [Math]::Round([Decimal] $Rates[-1].$RateHeader + (Get-TrendLine -Data $Rates.$RateHeader)[-1], $Precision)
-                $DateHeader = [DateTime]::Now.ToString('yyyy\-MM\-dd HH\:mm\:ss')
+                $DateHeader = [DateTime]::Now.ToString('yyyy\-MM\-dd')
             })
         }
 
@@ -185,7 +183,7 @@ function Get-SnP500Trend {
             $ExportFileName = $FilePath.Name -replace '\.csv', "-prediction-$([DateTime]::Now.ToString('yyyy\-MM\-dd')).csv"
             $Rates[(-1 * ($SamplesBackCount + $PredictionsAheadCount))..-1] | ForEach-Object {
                 [PSCustomObject] @{
-                    $DateHeader = ([DateTime] $_.$DateHeader).ToString('yyyy\-MM\-dd HH\:mm\:ss')
+                    $DateHeader = ([DateTime] $_.$DateHeader).ToString('yyyy\-MM\-dd')
                     $RateHeader = $_.$RateHeader
                     Count = ++$Counter
                 }
@@ -194,7 +192,7 @@ function Get-SnP500Trend {
         else {
             $Rates[(-1 * ($SamplesBackCount + $PredictionsAheadCount))..-1] | ForEach-Object {
                 [PSCustomObject] @{
-                    Date = ([DateTime] $_.Date).ToString('yyyy\-MM\-dd HH\:mm\:ss')
+                    Date = ([DateTime] $_.Date).ToString('yyyy\-MM\-dd')
                     Rate = $_.Close
                     Count = ++$Counter
                 }
