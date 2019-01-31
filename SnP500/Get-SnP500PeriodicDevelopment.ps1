@@ -6,7 +6,7 @@ function Get-SnP500PeriodicDevelopment {
         .EXAMPLE
             $JanuarySnP500 = 1951..2019 | %{
                 $Year = $_
-                $Development = Get-SnP500PeriodicDevelopment -Verbose -StartDate (Get-Date -Year $_ -Month 1 -Day 2) `
+                $Development = Get-SnP500PeriodicDevelopment -StartDate (Get-Date -Year $_ -Month 1 -Day 2) `
                                                 -EndDate (Get-Date -Year $_ -Month 1 -Day 29)
                 [PSCustomObject] @{
                         Year = $Year
@@ -26,18 +26,23 @@ function Get-SnP500PeriodicDevelopment {
     ## 2019-01-31. beta version...
     
     $SnPCSV = Import-Csv -LiteralPath $FilePath
-
+    [Bool] $StartDone = $False
+    [Bool] $EndDone = $False
     $SnPCSV | ForEach-Object {
     
-        if (($CsvNow = [DateTime] $_.Date) -lt $StartDate.AddDays(1) `
-            -and $CsvNow -gt $StartDate.AddDays(-1)) {
-        
+        if (($CsvNow = [DateTime] $_.Date) -eq $StartDate -or `
+            $CsvNow -gt $StartDate -and -not $StartDone) {
+            
+            $StartDone = $True
+            
             Write-Verbose "Found start date as $CsvNow (close: $($_.Close))."
             $StartClose = [Decimal] $_.Close
 
         }
-        if (($CsvNow = [DateTime] $_.Date) -lt $EndDate.AddDays(1) `
-            -and $CsvNow -gt $EndDate.AddDays(-1)) {
+        if (($CsvNow = [DateTime] $_.Date) -eq $EndDate -or `
+            $CsvNow -gt $EndDate -and -not $EndDone) {
+        
+            $EndDone = $True
 
             Write-Verbose "Found end date as $CsvNow (close: $($_.Close))."
             $EndClose = [Decimal] $_.Close
