@@ -211,7 +211,7 @@ function Get-SnP500PeriodicDevelopment {
             
             $StartDone = $True
             
-            Write-Verbose "Found start date as $CsvNow (close: $($_.Close))."
+            Write-Verbose "Found start date as $(([DateTime] $_.Date).ToString('yyyy\-MM\-dd')) (close: $($_.Close))."
             $StartClose = [Decimal] $_.Close
 
         }
@@ -219,7 +219,7 @@ function Get-SnP500PeriodicDevelopment {
         
             $EndDone = $True
 
-            Write-Verbose "Found end date as $CsvNow (close: $($_.Close))."
+            Write-Verbose "Found end date as $(([DateTime] $_.Date).ToString('yyyy\-MM\-dd')) (close: $($_.Close))."
             $EndClose = [Decimal] $_.Close
 
         }
