@@ -196,7 +196,9 @@ function Get-SnP500PeriodicDevelopment {
     Param(
         [DateTime] $StartDate = (Get-Date).AddDays(-21),
         [DateTime] $EndDate = (Get-Date).AddDays(-1),
-        [String] $FilePath = "C:\temp\^GSPC.csv"
+        [String] $FilePath = "C:\temp\^GSPC.csv",
+        [String] $RateName = "Close",
+        [String] $DateName = "Date"
         )
 
     
@@ -207,20 +209,20 @@ function Get-SnP500PeriodicDevelopment {
     [Bool] $EndDone = $False
     $SnPCSV | ForEach-Object {
     
-        if (-not $StartDone -and ([DateTime] $_.Date) -ge $StartDate) {
+        if (-not $StartDone -and ([DateTime] $_.$DateName) -ge $StartDate) {
             
             $StartDone = $True
             
-            Write-Verbose "Found start date as $(([DateTime] $_.Date).ToString('yyyy\-MM\-dd')) (close: $($_.Close))."
-            $StartClose = [Decimal] $_.Close
+            Write-Verbose "Found start date as $(([DateTime] $_.$DateName).ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
+            $StartClose = [Decimal] $_.$RateName
 
         }
-        if (-not $EndDone -and ([DateTime] $_.Date) -ge $EndDate) {
+        if (-not $EndDone -and ([DateTime] $_.$DateName) -ge $EndDate) {
         
             $EndDone = $True
-
-            Write-Verbose "Found end date as $(([DateTime] $_.Date).ToString('yyyy\-MM\-dd')) (close: $($_.Close))."
-            $EndClose = [Decimal] $_.Close
+            
+            Write-Verbose "Found end date as $(([DateTime] $_.$DateName).ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
+            $EndClose = [Decimal] $_.$RateName
 
         }
 
