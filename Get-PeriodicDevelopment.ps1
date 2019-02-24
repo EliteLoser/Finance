@@ -3,8 +3,8 @@ function Get-PeriodicDevelopment {
         .SYNOPSIS
             Get the development of numbers between given dates, as a percentage.
 
-            The dates have to be able to be "cast" to the .NET DateTime type as
-            it exists in the CSV for this to work.
+            The dates have to be able to be "cast" to the .NET DateTime type as they exist
+            in the CSV for this to work.
 
         .EXAMPLE
             $JanuarySnP500 = 1951..2019 | %{
