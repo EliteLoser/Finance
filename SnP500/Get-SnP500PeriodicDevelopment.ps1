@@ -207,8 +207,7 @@ function Get-SnP500PeriodicDevelopment {
     [Bool] $EndDone = $False
     $SnPCSV | ForEach-Object {
     
-        if ((($CsvNow = [DateTime] $_.Date) -eq $StartDate -or `
-            $CsvNow -gt $StartDate) -and -not $StartDone) {
+        if (-not $StartDone -and ([DateTime] $_.Date) -ge $StartDate) {
             
             $StartDone = $True
             
@@ -216,8 +215,7 @@ function Get-SnP500PeriodicDevelopment {
             $StartClose = [Decimal] $_.Close
 
         }
-        if ((($CsvNow = [DateTime] $_.Date) -eq $EndDate -or `
-            $CsvNow -gt $EndDate) -and -not $EndDone) {
+        if (-not $EndDone -and ([DateTime] $_.Date) -ge $EndDate) {
         
             $EndDone = $True
 
