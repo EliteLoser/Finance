@@ -1,12 +1,30 @@
-function Get-SnP500PeriodicDevelopment {
+function Get-PeriodicDevelopment {
     <#
         .SYNOPSIS
-            Get the development of the SnP500 index between given dates, as a percentage.
+            Get the development of numbers between given dates, as a percentage.
+
+            The dates have to be able to be "cast" to the .NET DateTime type as they exist
+            in the CSV for this to work.
+
+        .EXAMPLE
+            Rates from oslobors.no ... example...
+
+            @(foreach ($Year in 2015..2019) {
+                foreach ($Month in 1..12) {
+                    [PSCustomObject] @{
+                        Year = $Year
+                        Month = $Month
+                        Development = "{0:N2}" -f (Get-PeriodicDevelopment -FilePath .\Tomra-2019-02-24.csv -DateName TOM -RateName Siste `
+                                -Verbose -StartDate "$Month/1/$Year" -EndDate "$Month/27/$Year" `
+                                -DottedEuropeToUS -LatestFirst)
+                    }
+                }
+            }) | Format-Table -AutoSize
 
         .EXAMPLE
             $JanuarySnP500 = 1951..2019 | %{
                 $Year = $_
-                $Development = Get-SnP500PeriodicDevelopment -StartDate (Get-Date -Year $_ -Month 1 -Day 2) `
+                $Development = Get-PeriodicDevelopment -StartDate (Get-Date -Year $_ -Month 1 -Day 2) `
                                                 -EndDate (Get-Date -Year $_ -Month 1 -Day 29)
                 [PSCustomObject] @{
                         Year = $Year
@@ -92,7 +110,7 @@ function Get-SnP500PeriodicDevelopment {
 
         .EXAMPLE
             1..12 | %{ [PSCustomObject] @{
-        Month = $_; PercentDevelopment = Get-SnP500PeriodicDevelopment -StartDate (Get-Date -Year 2009 -Month $_ -Day 1 -Hour 0 -Minute 0 -Sec 0) `
+        Month = $_; PercentDevelopment = Get-PeriodicDevelopment -StartDate (Get-Date -Year 2009 -Month $_ -Day 1 -Hour 0 -Minute 0 -Sec 0) `
               -EndDate (Get-Date -Year 2009 -Month $_ -Day 30 -Hour 0 -Minute 0 -Second 0) } }
         
             Month              PercentDevelopment
@@ -113,7 +131,7 @@ function Get-SnP500PeriodicDevelopment {
         .EXAMPLE
             $YearlySnP500Dev = 1950..2018 | foreach {
                 [PSCustomObject] @{
-                Year = $_; YearlyDevelopment = Get-SnP500PeriodicDevelopment -StartDate (Get-Date -Year $_ -Month 1 -Day 1) `
+                Year = $_; YearlyDevelopment = Get-PeriodicDevelopment -StartDate (Get-Date -Year $_ -Month 1 -Day 1) `
                 -EndDate (Get-Date -Year $_ -Month 12 -Day 27) } };
     
                 $Global:yearsnpct = 0; $YearlySnP500Dev | sort -desc yearlydevelopment | select year, yearlydevelopment, @{
@@ -198,30 +216,56 @@ function Get-SnP500PeriodicDevelopment {
         [DateTime] $EndDate = (Get-Date).AddDays(-1),
         [String] $FilePath = "C:\temp\^GSPC.csv",
         [String] $RateName = "Close",
-        [String] $DateName = "Date"
+        [String] $DateName = "Date",
+        [String[]] $DateReplace = @(), # Norwegian to US, dotted format: '(\d\d)\.(\d\d)\.(\d\d)', '$2/$1/$3'
+        [Switch] $DottedEuropeToUS,
+        [String] $Delimiter = ",",
+        [Switch] $LatestFirst
         )
 
     
     ## 2019-01-31. beta version...
+    $CSV = Import-Csv -LiteralPath $FilePath -Delimiter $Delimiter
     
-    $SnPCSV = Import-Csv -LiteralPath $FilePath
+    if ($LatestFirst) {
+        $CSV = $CSV[-1..-($CSV.Count)]
+    }
+    
     [Bool] $StartDone = $False
     [Bool] $EndDone = $False
-    $SnPCSV | ForEach-Object {
-    
-        if (-not $StartDone -and ([DateTime] $_.$DateName) -ge $StartDate) {
+    if ($DottedEuropeToUS) {
+        Write-Verbose "Setting `$DateReplace regexes to Europe-dotted > US format for the DateTime casts."
+        $DateReplace = @('^\s*(\d\d)\.(\d\d)\.(\d\d(?:\d{2})?)\s*$', '$2/$1/$3')
+    }
+    $Csv | ForEach-Object {
+        
+        if ($DateReplace.Count -gt 0) {
+            if (++$SpawnAndForget -eq 1) {
+                Write-Verbose "Performing regex -replace on all dates in property/header/column `$_.$DateName"
+                # Keep it in mind anyway!
+                if ($SpawnAndForget -ge ([System.Int32]::MaxValue - 5)) {
+                    $SpawnAndForget = 1
+                }
+            }
+            $CurrentDate = [DateTime] ($_.$DateName -replace $DateReplace)
+        }
+        else {
+            $CurrentDate = [DateTime] $_.$DateName
+        }
+        
+        if (-not $StartDone -and $CurrentDate -ge $StartDate) {
             
             $StartDone = $True
             
-            Write-Verbose "Found start date as $(([DateTime] $_.$DateName).ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
+            Write-Verbose "Found start date as $($CurrentDate.ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
             $StartClose = [Decimal] $_.$RateName
 
         }
-        if (-not $EndDone -and ([DateTime] $_.$DateName) -ge $EndDate) {
+        if (-not $EndDone -and $CurrentDate -ge $EndDate) {
         
             $EndDone = $True
             
-            Write-Verbose "Found end date as $(([DateTime] $_.$DateName).ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
+            Write-Verbose "Found end date as $($CurrentDate.ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
             $EndClose = [Decimal] $_.$RateName
 
         }
