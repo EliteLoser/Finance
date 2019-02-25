@@ -192,8 +192,8 @@ function Get-SnP500Trend {
         else {
             $Rates[(-1 * ($SamplesBackCount + $PredictionsAheadCount))..-1] | ForEach-Object {
                 [PSCustomObject] @{
-                    Date = ([DateTime] $_.Date).ToString('yyyy\-MM\-dd')
-                    Rate = $_.Close
+                    Date = ([DateTime] $_.$DateHeader).ToString('yyyy\-MM\-dd')
+                    Rate = $_.$RateHeader
                     Count = ++$Counter
                 }
             }
