@@ -7,6 +7,21 @@ function Get-PeriodicDevelopment {
             in the CSV for this to work.
 
         .EXAMPLE
+            Rates from oslobors.no ... example...
+
+            @(foreach ($Year in 2015..2019) {
+                foreach ($Month in 1..12) {
+                    [PSCustomObject] @{
+                        Year = $Year
+                        Month = $Month
+                        Development = "{0:N2}" -f (Get-PeriodicDevelopment -FilePath .\Tomra-2019-02-24.csv -DateName TOM -RateName Siste `
+                                -Verbose -StartDate "$Month/1/$Year" -EndDate "$Month/27/$Year" `
+                                -DottedEuropeToUS -LatestFirst)
+                    }
+                }
+            }) | Format-Table -AutoSize
+
+        .EXAMPLE
             $JanuarySnP500 = 1951..2019 | %{
                 $Year = $_
                 $Development = Get-PeriodicDevelopment -StartDate (Get-Date -Year $_ -Month 1 -Day 2) `
@@ -201,30 +216,56 @@ function Get-PeriodicDevelopment {
         [DateTime] $EndDate = (Get-Date).AddDays(-1),
         [String] $FilePath = "C:\temp\^GSPC.csv",
         [String] $RateName = "Close",
-        [String] $DateName = "Date"
+        [String] $DateName = "Date",
+        [String[]] $DateReplace = @(), # Norwegian to US, dotted format: '(\d\d)\.(\d\d)\.(\d\d)', '$2/$1/$3'
+        [Switch] $DottedEuropeToUS,
+        [String] $Delimiter = ",",
+        [Switch] $LatestFirst
         )
 
     
     ## 2019-01-31. beta version...
+    $CSV = Import-Csv -LiteralPath $FilePath -Delimiter $Delimiter
     
-    $SnPCSV = Import-Csv -LiteralPath $FilePath
+    if ($LatestFirst) {
+        $CSV = $CSV[-1..-($CSV.Count)]
+    }
+    
     [Bool] $StartDone = $False
     [Bool] $EndDone = $False
-    $SnPCSV | ForEach-Object {
-    
-        if (-not $StartDone -and ([DateTime] $_.$DateName) -ge $StartDate) {
+    if ($DottedEuropeToUS) {
+        Write-Verbose "Setting `$DateReplace regexes to Europe-dotted > US format for the DateTime casts."
+        $DateReplace = @('^\s*(\d\d)\.(\d\d)\.(\d\d(?:\d{2})?)\s*$', '$2/$1/$3')
+    }
+    $Csv | ForEach-Object {
+        
+        if ($DateReplace.Count -gt 0) {
+            if (++$SpawnAndForget -eq 1) {
+                Write-Verbose "Performing regex -replace on all dates in property/header/column `$_.$DateName"
+                # Keep it in mind anyway!
+                if ($SpawnAndForget -ge ([System.Int32]::MaxValue - 5)) {
+                    $SpawnAndForget = 1
+                }
+            }
+            $CurrentDate = [DateTime] ($_.$DateName -replace $DateReplace)
+        }
+        else {
+            $CurrentDate = [DateTime] $_.$DateName
+        }
+        
+        if (-not $StartDone -and $CurrentDate -ge $StartDate) {
             
             $StartDone = $True
             
-            Write-Verbose "Found start date as $(([DateTime] $_.$DateName).ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
+            Write-Verbose "Found start date as $($CurrentDate.ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
             $StartClose = [Decimal] $_.$RateName
 
         }
-        if (-not $EndDone -and ([DateTime] $_.$DateName) -ge $EndDate) {
+        if (-not $EndDone -and $CurrentDate -ge $EndDate) {
         
             $EndDone = $True
             
-            Write-Verbose "Found end date as $(([DateTime] $_.$DateName).ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
+            Write-Verbose "Found end date as $($CurrentDate.ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
             $EndClose = [Decimal] $_.$RateName
 
         }
