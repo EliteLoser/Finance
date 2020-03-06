@@ -180,7 +180,7 @@ function Get-SnP500Trend {
 
         [Decimal] $Counter = 0
         if ($ExportToCSV) {
-            $ExportFileName = $FilePath.Name -replace '\.csv', "-prediction-$([DateTime]::Now.ToString('yyyy\-MM\-dd')).csv"
+            $ExportFileName = $FilePath2.Name -replace '\.csv', "-prediction-$([DateTime]::Now.ToString('yyyy\-MM\-dd')).csv"
             $Rates[(-1 * ($SamplesBackCount + $PredictionsAheadCount))..-1] | ForEach-Object {
                 [PSCustomObject] @{
                     $DateHeader = ([DateTime] $_.$DateHeader).ToString('yyyy\-MM\-dd')
@@ -202,4 +202,3 @@ function Get-SnP500Trend {
     End {
     }
 }
-
