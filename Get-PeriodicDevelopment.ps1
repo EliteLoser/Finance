@@ -223,66 +223,77 @@ function Get-PeriodicDevelopment {
         [Switch] $LatestFirst
         )
 
-    
+    Begin {
     ## 2019-01-31. beta version...
-    $CSV = Import-Csv -LiteralPath $FilePath -Delimiter $Delimiter
-    
-    if ($LatestFirst) {
-        $CSV = $CSV[-1..-($CSV.Count)]
+        Write-Verbose "Importing '$FilePath' CSV file."
+        $CSV = Import-Csv -LiteralPath $FilePath -Delimiter $Delimiter
     }
-    
-    [Bool] $StartDone = $False
-    [Bool] $EndDone = $False
-    if ($DottedEuropeToUS) {
-        Write-Verbose "Setting `$DateReplace regexes to Europe-dotted > US format for the DateTime casts."
-        $DateReplace = @('^\s*(\d\d)\.(\d\d)\.(\d\d(?:\d{2})?)\s*$', '$2/$1/$3')
+    process {
+
     }
-    $Csv | ForEach-Object {
+    end {
+        if ($LatestFirst) {
+            $CSV = $CSV[-1..-($CSV.Count)]
+        }
+    
+        [Bool] $StartDone = $False
+        [Bool] $EndDone = $False
+        if ($DottedEuropeToUS) {
+            Write-Verbose "Setting `$DateReplace regexes to Europe-dotted > US format for the DateTime casts."
+            $DateReplace = @('^\s*(\d\d)\.(\d\d)\.(\d\d(?:\d{2})?)\s*$', '$2/$1/$3')
+        }
+        $Csv | ForEach-Object {
         
-        if ($DateReplace.Count -gt 0) {
-            if (++$SpawnAndForget -eq 1) {
-                Write-Verbose "Performing regex -replace on all dates in property/header/column `$_.$DateName"
-                # Keep it in mind anyway!
-                if ($SpawnAndForget -ge ([System.Int32]::MaxValue - 5)) {
-                    $SpawnAndForget = 1
+            if ($DateReplace.Count -gt 0) {
+                if (++$SpawnAndForget -eq 1) {
+                    Write-Verbose "Performing regex -replace on all dates in property/header/column `$_.$DateName"
+                    # Keep it in mind anyway!
+                    if ($SpawnAndForget -ge ([System.Int32]::MaxValue - 5)) {
+                        $SpawnAndForget = 1
+                    }
                 }
+                $CurrentDate = [DateTime] ($_.$DateName -replace $DateReplace)
             }
-            $CurrentDate = [DateTime] ($_.$DateName -replace $DateReplace)
-        }
-        else {
-            $CurrentDate = [DateTime] $_.$DateName
-        }
+            else {
+                $CurrentDate = [DateTime] $_.$DateName
+            }
         
-        if (-not $StartDone -and $CurrentDate -ge $StartDate) {
+            if (-not $StartDone -and $CurrentDate -ge $StartDate) {
             
-            $StartDone = $True
+                $StartDone = $True
+                $UsedStartDate = $CurrentDate
             
-            Write-Verbose "Found start date as $($CurrentDate.ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
-            $StartClose = [Decimal] $_.$RateName
+                Write-Verbose "Found start date as $($CurrentDate.ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
+                $StartClose = [Decimal] $_.$RateName
 
-        }
-        if (-not $EndDone -and $CurrentDate -ge $EndDate) {
+            }
+            if (-not $EndDone -and $CurrentDate -ge $EndDate) {
         
-            $EndDone = $True
-            
-            Write-Verbose "Found end date as $($CurrentDate.ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
-            $EndClose = [Decimal] $_.$RateName
+                $EndDone = $True
+                $UsedEndDate = $CurrentDate
+
+                Write-Verbose "Found end date as $($CurrentDate.ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
+                $EndClose = [Decimal] $_.$RateName
+
+            }
 
         }
 
+        # Calculate development as a percentage.
+
+        if ($null -eq $EndClose) {
+            Write-Verbose "End close not found for end date: $EndDate"
+            return
+        }
+        if ($null -eq $StartClose) {
+            Write-Verbose "Start close not found for start date: $StartDate"
+            return
+        }
+
+        [PSCustomObject] @{
+            UsedStartDate = $UsedStartDate
+            UsedEndDate = $UsedEndDate
+            PercentDevelopment = (($EndClose - $StartClose) / $EndClose) * 100
+        }
     }
-
-    # Calculate development as a percentage.
-
-    if ($null -eq $EndClose) {
-        Write-Verbose "End close not found for end date: $EndDate"
-        return
-    }
-    if ($null -eq $StartClose) {
-        Write-Verbose "Start close not found for start date: $StartDate"
-        return
-    }
-
-    (($EndClose - $StartClose) / $EndClose) * 100
-
 }
