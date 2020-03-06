@@ -4,7 +4,9 @@ function Get-PeriodicDevelopment {
             Get the development of numbers between given dates, as a percentage.
 
             The dates have to be able to be "cast" to the .NET DateTime type as they exist
-            in the CSV for this to work.
+            in the CSV for this to work. You can specify a -DateReplace regex array.
+            For instance this:
+            # Norwegian to US. Dotted format: -DateReplace '(\d\d)\.(\d\d)\.(\d\d)', '$2/$1/$3'
 
         .EXAMPLE
             Rates from oslobors.no ... example...
