@@ -14,9 +14,9 @@ function Get-PeriodicDevelopment {
                     [PSCustomObject] @{
                         Year = $Year
                         Month = $Month
-                        Development = "{0:N2}" -f (Get-PeriodicDevelopment -FilePath .\Tomra-2019-02-24.csv -DateName TOM -RateName Siste `
+                        Development = "{0:N2}" -f ((Get-PeriodicDevelopment -FilePath .\Tomra-2019-02-24.csv -DateName TOM -RateName Siste `
                                 -Verbose -StartDate "$Month/1/$Year" -EndDate "$Month/27/$Year" `
-                                -DottedEuropeToUS -LatestFirst)
+                                -DottedEuropeToUS -LatestFirst)).PercentDevelopment
                     }
                 }
             }) | Format-Table -AutoSize
@@ -24,8 +24,8 @@ function Get-PeriodicDevelopment {
         .EXAMPLE
             $JanuarySnP500 = 1951..2019 | %{
                 $Year = $_
-                $Development = Get-PeriodicDevelopment -StartDate (Get-Date -Year $_ -Month 1 -Day 2) `
-                                                -EndDate (Get-Date -Year $_ -Month 1 -Day 29)
+                $Development = (Get-PeriodicDevelopment -StartDate (Get-Date -Year $_ -Month 1 -Day 2) `
+                                                -EndDate (Get-Date -Year $_ -Month 1 -Day 29)).PercentDevelopment
                 [PSCustomObject] @{
                         Year = $Year
                         Development = if ($Development) { [Math]::Round($Development, 4) } else { '-' }
@@ -110,8 +110,8 @@ function Get-PeriodicDevelopment {
 
         .EXAMPLE
             1..12 | %{ [PSCustomObject] @{
-        Month = $_; PercentDevelopment = Get-PeriodicDevelopment -StartDate (Get-Date -Year 2009 -Month $_ -Day 1 -Hour 0 -Minute 0 -Sec 0) `
-              -EndDate (Get-Date -Year 2009 -Month $_ -Day 30 -Hour 0 -Minute 0 -Second 0) } }
+        Month = $_; PercentDevelopment = (Get-PeriodicDevelopment -StartDate (Get-Date -Year 2009 -Month $_ -Day 1 -Hour 0 -Minute 0 -Sec 0) `
+              -EndDate (Get-Date -Year 2009 -Month $_ -Day 30 -Hour 0 -Minute 0 -Second 0)).PercentDevelopment } }
         
             Month              PercentDevelopment
             -----              ------------------
@@ -129,10 +129,11 @@ function Get-PeriodicDevelopment {
                12  0.5255121626870163254312544300
 
         .EXAMPLE
+            . .\Get-PeriodicDevelopment.ps1
             $YearlySnP500Dev = 1950..2018 | foreach {
                 [PSCustomObject] @{
-                Year = $_; YearlyDevelopment = Get-PeriodicDevelopment -StartDate (Get-Date -Year $_ -Month 1 -Day 1) `
-                -EndDate (Get-Date -Year $_ -Month 12 -Day 27) } };
+                Year = $_; YearlyDevelopment = (Get-PeriodicDevelopment -StartDate (Get-Date -Year $_ -Month 1 -Day 1) `
+                -EndDate (Get-Date -Year $_ -Month 12 -Day 27)).PercentDevelopment } };
     
                 $Global:yearsnpct = 0; $YearlySnP500Dev | sort -desc yearlydevelopment | select year, yearlydevelopment, @{
                  n='Count';e={++$Global:yearsnpct; $Global:yearsnpct}}
@@ -187,27 +188,31 @@ function Get-PeriodicDevelopment {
             1956  3.0068749354193527616118393100    46
             1978  2.5550467652165222810191346200    47
             1984   1.335259272683125005507187700    48
-            2015 -0.0826623389253586190128859700    49
-            1987 -0.3583458789411526139672260500    50
-            1994  -0.993797931925029247223535800    51
-            2011 -1.7789107049360931355899322700    52
-            1970 -2.0968317969845997138917428400    53
-            1960 -3.6863984715541445405701720400    54
-            1953 -7.4059169326554808844791940300    55
-            2018  -8.451007339669504210695825830    56
-            2000  -9.068969332643874808256786320    57
-            1990  -9.421392341745581827252428120    58
-            2001 -10.529534193561968035658851090    59
-            1981 -11.507319330350519269252946820    60
-            1962 -12.706480506773832699711446950    61
-            1977 -12.928759894459102902374670180    62
-            1969 -13.895890410958904109589041100    63
-            1966 -14.353056514662492064725318640    64
-            1957 -16.725615627811236593671723410    65
-            1973 -22.103749004472534299030815060    66
-            2002 -31.303519974581471680685389630    67
-            1974 -45.443707835395602418367932200    68
-            2008 -66.451204515275099215197127580    69
+            2015 -0.0826623389253586.....
+
+        .EXAMPLE
+            . .\Get-PeriodicDevelopment.ps1
+            3..370 | where { $_ % 5 -eq 0 } | foreach {
+                $Development = Get-PeriodicDevelopment -StartDate (Get-Date).AddDays(-1 * $_) -EndDate (get-date).AddDays(-2)
+                [PSCustomObject] @{
+                    DaysBack = $_
+                    DevelopmentInPercent = $Development.PercentDevelopment
+                    UsedStartDate = $Development.UsedStartDate.ToString('yyyy\-MM\-dd')
+                    UsedEndDate = $Development.UsedEndDate.ToString('yyyy\-MM\-dd')
+                }
+            } | ft
+
+        
+            DaysBack            DevelopmentInPercent UsedStartDate UsedEndDate
+            --------            -------------------- ------------- -----------
+                   5 -2,1921744576077213829823216100 2020-03-02    2020-03-05 
+                  10 -3,0572681271383755964616229800 2020-02-26    2020-03-05 
+                  15 -10,377522871576105816580435850 2020-02-21    2020-03-05 
+                  20 -11,453603734122575286954087030 2020-02-18    2020-03-05 
+                  25 -11,038911668649440283311499800 2020-02-11    2020-03-05 
+                  30 -10,643071432614805361307934790 2020-02-06    2020-03-05 
+                  35 -7,4399619499585821965899950400 2020-02-03    2020-03-05 
+                  40  -7,26502332............ and so on
 
     #>
     [CmdletBinding()]
