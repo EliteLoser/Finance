@@ -11,6 +11,8 @@ It looks at all 14-day periods, or as close to it as my algorithm based on date 
 
 This is where I get the CSV file: https://finance.yahoo.com/quote/%5EGSPC/history/
 
+Look here for some code examples of how you can do this (requires patience or fast hardware...): https://github.com/EliteLoser/Finance/blob/master/SnP500/snp500-14-dagers-analyse.txt
+
 ## Bottom SnP 500 List
 ![pic](/snp500-14-day-after-1970-bottom.jpg)
 
