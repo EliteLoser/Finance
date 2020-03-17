@@ -227,13 +227,14 @@ function Get-PeriodicDevelopment {
         [String[]] $DateReplace = @(), # Norwegian to US, dotted format: '(\d\d)\.(\d\d)\.(\d\d)', '$2/$1/$3'
         [Switch] $DottedEuropeToUS,
         [String] $Delimiter = ",",
-        [Switch] $LatestFirst
+        [Switch] $LatestFirst,
+        [Switch] $UpdateCsvCache
         )
 
     Begin {
     ## 2019-01-31. beta version...
         # Retarded caching mechanism... Just want to save time.
-        if (-not $Global:SvendsenTechFinanceTechDataStuffVariableCSVImportCache) {
+        if (-not $Global:SvendsenTechFinanceTechDataStuffVariableCSVImportCache -or $UpdateCsvCache) {
             Write-Verbose "Importing and global var caching '$FilePath' CSV file."
             $Global:SvendsenTechFinanceTechDataStuffVariableCSVImportCache = Import-Csv -LiteralPath $FilePath -Delimiter $Delimiter
         }
