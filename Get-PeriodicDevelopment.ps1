@@ -232,15 +232,18 @@ function Get-PeriodicDevelopment {
 
     Begin {
     ## 2019-01-31. beta version...
-        Write-Verbose "Importing '$FilePath' CSV file."
-        $CSV = Import-Csv -LiteralPath $FilePath -Delimiter $Delimiter
+        # Retarded caching mechanism... Just want to save time.
+        if (-not $Global:SvendsenTechFinanceTechDataStuffVariableCSVImportCache) {
+            Write-Verbose "Importing and global var caching '$FilePath' CSV file."
+            $Global:SvendsenTechFinanceTechDataStuffVariableCSVImportCache = Import-Csv -LiteralPath $FilePath -Delimiter $Delimiter
+        }
     }
     process {
 
     }
     end {
         if ($LatestFirst) {
-            $CSV = $CSV[-1..-($CSV.Count)]
+            $Global:SvendsenTechFinanceTechDataStuffVariableCSVImportCache = $Global:SvendsenTechFinanceTechDataStuffVariableCSVImportCache[-1..-($Global:SvendsenTechFinanceTechDataStuffVariableCSVImportCache.Count)]
         }
     
         [Bool] $StartDone = $False
@@ -249,7 +252,7 @@ function Get-PeriodicDevelopment {
             Write-Verbose "Setting `$DateReplace regexes to Europe-dotted > US format for the DateTime casts."
             $DateReplace = @('^\s*(\d\d)\.(\d\d)\.(\d\d(?:\d{2})?)\s*$', '$2/$1/$3')
         }
-        $Csv | ForEach-Object {
+        $Global:SvendsenTechFinanceTechDataStuffVariableCSVImportCache | ForEach-Object {
         
             if ($DateReplace.Count -gt 0) {
                 if (++$SpawnAndForget -eq 1) {
