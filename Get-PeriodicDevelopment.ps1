@@ -253,6 +253,7 @@ function Get-PeriodicDevelopment {
             Write-Verbose "Setting `$DateReplace regexes to Europe-dotted > US format for the DateTime casts."
             $DateReplace = @('^\s*(\d\d)\.(\d\d)\.(\d\d(?:\d{2})?)\s*$', '$2/$1/$3')
         }
+        #[Decimal] $RangeCounter = 1
         $Global:SvendsenTechFinanceTechDataStuffVariableCSVImportCache | ForEach-Object {
         
             if ($DateReplace.Count -gt 0) {
@@ -293,11 +294,11 @@ function Get-PeriodicDevelopment {
         # Calculate development as a percentage.
 
         if ($null -eq $EndClose) {
-            Write-Verbose "End close not found for end date: $EndDate"
+            Write-Warning "End close not found for end date: $EndDate"
             return
         }
         if ($null -eq $StartClose) {
-            Write-Verbose "Start close not found for start date: $StartDate"
+            Write-Warning "Start close not found for start date: $StartDate"
             return
         }
 
