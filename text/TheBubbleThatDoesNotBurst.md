@@ -19,7 +19,7 @@ to how the US represents itself politically.
 I spent an evening reading about the fear and uncertainty that was all over the articles in a "random" bank blog dating back to 2011, and kept
 reading until 2015 or so before I discontinued, now
 in retrospect knowing it would turn out to be the longest bull (positive/up) market in history, unless I am misinformed. I read it posted by a finance expert,
-so I think it is correct, when the bull market ended this year (if I remember correctly and there were no previous dips significant enough).
+so I think it is correct, when the bull market ended this year - if I remember correctly and there were no previous dips significant enough.
 I forgot the numbers, but I think we went 10 or 11 years on the S&P 500 with overall positive momentum semi short term.
 
 
