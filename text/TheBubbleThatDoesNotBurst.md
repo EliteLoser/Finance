@@ -1,5 +1,7 @@
 # The Bubble That Does Not Burst?
 
+Initial notes: 2020-08-06.
+
 I caught myself wondering about something relatively trivial, yet not, as most would agree in the finance sector, which I have studied from afar mostly.
 There is little to no doubt among the finance experts that markets are overpriced. Even the eccentrics seem to agree. This based on what I have heard
 and read.
