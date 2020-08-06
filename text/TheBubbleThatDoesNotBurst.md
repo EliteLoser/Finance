@@ -1,4 +1,4 @@
-#The Bubble That Does Not Burst?
+# The Bubble That Does Not Burst?
 
 I caught myself wondering about something relatively trivial, yet not, as most would agree in the finance sector, which I have studied from afar mostly.
 There is little to no doubt among the finance experts that markets are overpriced. Even the eccentrics seem to agree. This based on what I have heard
@@ -37,7 +37,7 @@ it has any consequences...? I find the world an odd place at the moment within t
 matter 8000, as I think the extreme example of the Tesla stock must be close to, just to be
 expected and a green signal for investors to invest within this new reality? The correlation between asset values and income generated in companies vs
 share price is maybe at record lows overall, without
-having researched that to decisively make the statement (speculation and a feeling, sorry, maybe 90`s Japan was close? other? ... open an issue if you know!
+having researched that to decisively make the statement (speculation and a feeling, sorry, maybe 90s Japan was close? other? ... open an issue if you know!
 (part joke)).
 
 
