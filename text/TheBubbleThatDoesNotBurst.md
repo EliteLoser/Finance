@@ -10,7 +10,7 @@ a prominent figure say we now have "zombie markets" disconnected from real econo
 
 
 The US is being very socialistic, I think, through the FED (Federal Reserve, national bank)
-by injecting all that money. Sadly it probably mostly serves to save or generate income for already-wealthy people more than it does the commoner and
+by injecting all that money. Sadly it probably mostly serves to save or generate income for already wealthy people more than it does the commoner and
 "most people" sufficiently good. Although avoiding bankruptcies keeps people employed, of course. As well
 as other important factors. That said, it is quite contrary
 to how the US represents itself politically.
