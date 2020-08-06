@@ -18,9 +18,10 @@ to how the US represents itself politically.
 
 I spent an evening reading about the fear and uncertainty that was all over the articles in a "random" bank blog dating back to 2011, and kept
 reading until 2015 or so before I discontinued, now
-in retrospect knowing it would turn out to be the longest bull (positive/up) market in history, unless I am misinformed. I read it posted by a finance expert,
-so I think it is correct, when the bull market ended this year - if I remember correctly and there were no previous dips significant enough.
-I forgot the numbers, but I think we went 10 or 11 years on the S&P 500 with overall positive momentum semi short term.
+in retrospect knowing it would turn out to be the longest bull (positive/up) market in history, unless I am misinformed, I read it posted by a finance expert,
+so I think it is correct. It ended when the bull market ended this year if I remember correctly and there were no previous dips significant enough.
+I forgot the numbers, but I think we went 10-12 years on the broad US/world financial indicator that is the 
+S&P 500 index, with overall positive momentum semi short term.
 
 
 The quite simple question I am then left with is if this is a bubble that will not quite burst, meaning an entirely new macro-economic reality
