@@ -25,8 +25,9 @@ I forgot the numbers, but I think we went 10 or 11 years on the S&P 500 with ove
 
 The quite simple question I am then left with is if this is a bubble that will not quite burst, meaning an entirely new macro-economic reality
 we need to account for as humans thinking about our pensions that increasingly are being demanded to be self-provided, or is it
-a bubble after all? Debt has skyrocketed and the US debt size is frightening at this point. Governments keep injecting money and
-the disconnect grows. Capitalism sort of
+a bubble after all? Debt has skyrocketed and the US debt size is frightening at this point, but as
+it so happens, that is exactly the concerns they, among others, had in 2011-2015, but it did not affect the stock markets.
+Governments keep injecting money and the disconnect grows. Capitalism sort of
 is not allowed to work the way it was built, both for better and worse. Investors and commoners alike 
 are left with this conundrum I am now debating with myself here.
 
