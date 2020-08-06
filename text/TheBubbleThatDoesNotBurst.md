@@ -47,7 +47,8 @@ I heard there are "new players", literally, as in young people using apps such a
 is, due to expected remaining years alive, of course less risky overall to invest long term, since the likelyhood of a recovery even from a severe crash
 is more likely to occur within their lifetime and before they need the money, hopefully. But a lot is also traders. What role does this play? It provides
 what is called liquidity, likely more persistently inflated prices and more money in the markets overall if my understanding is correct. Beyond that I
-am not sure.
+am not sure, but I am quite confident it somehow mostly enriches the already richest 0.n % of the population in the end. I might have a dystopic (or
+in this case realistic) view.
 
 
 So will the bubble burst? I know nobody knows.
