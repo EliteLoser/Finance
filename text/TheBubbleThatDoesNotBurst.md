@@ -25,7 +25,8 @@ S&P 500 index, with overall positive momentum semi short term.
 
 
 The quite simple question I am then left with is if this is a bubble that will not quite burst, meaning an entirely new macro-economic reality
-we need to account for as humans thinking about our pensions that increasingly are being demanded to be self-provided, or is it
+we need to account for as humans thinking about our pensions that increasingly are being demanded to be self-provided
+due to an ageing population, or is it
 a bubble after all? Debt has skyrocketed and the US debt size is frightening at this point, but as
 it so happens, that is exactly the concerns they, among others, had in 2011-2015, but it did not affect the stock markets.
 Governments keep injecting money and the disconnect grows. Capitalism sort of
