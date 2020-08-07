@@ -6,7 +6,7 @@ I caught myself wondering about something relatively trivial, yet not, as most w
 There is little to no doubt among the finance experts that markets are overpriced. Even the eccentrics seem to agree. This based on what I have heard
 and read.
 It is said that the markets are now run by governments and I saw
-a prominent figure say we now have "zombie markets" disconnected from real economy.
+a prominent figure say we now have "zombie markets" disconnected from real economy, with higher debt and more inherent risk.
 
 
 The US is being very socialistic, I think, through the FED (Federal Reserve, national bank)
