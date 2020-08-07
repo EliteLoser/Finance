@@ -36,7 +36,7 @@ are left with this conundrum I am now debating with myself here.
 If we look to history, Japan still has not recovered from the 1990 levels on the stock markets, and it is entirely possible that this can happen again,
 elsewhere -
 but will the governments allow it? Furthermore, will it even be their choice?
-Will they "run out of tools"? How much debt can a state, particularly the US, have before - you know - 
+Will they "run out of tools"? How much debt can a country, particularly the US, have before - you know - 
 it has any consequences...? I find the world an odd place at the moment within this sector, as I know some others also do. Is a P/E of 500 or for that
 matter 8000, as I think the extreme example of the Tesla stock must be close to, just to be
 expected and a green signal for investors to invest within this new reality? The correlation between asset values and income generated in companies vs
