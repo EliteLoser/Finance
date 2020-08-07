@@ -47,7 +47,7 @@ having researched that to decisively make the statement (speculation and a feeli
 
 
 I heard there are "new players", literally, as in young people using apps such as "Robin Hood" to trade and take enormous risks. For a young person it
-is, due to expected remaining years alive, of course less risky overall to invest long term, since the likelyhood of a recovery even from a severe crash
+is, due to expected remaining years alive, of course less risky overall to invest long term, since a recovery even from a severe crash
 is more likely to occur within their lifetime and before they need the money, hopefully. But a lot is also traders. What role does this play? It provides
 what is called liquidity, likely more persistently inflated prices and more money in the markets overall if my understanding is correct. Beyond that I
 am not sure, but I am quite confident it somehow mostly enriches the already richest 0.n % of the population in the end. I might have a dystopian (or
