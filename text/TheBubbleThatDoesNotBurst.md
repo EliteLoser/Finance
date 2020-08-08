@@ -15,6 +15,20 @@ by injecting all that money. Sadly, it probably mostly serves to save or generat
 as other important factors. That said, it is quite contrary
 to how the US represents itself politically.
 
+As I was thinking about this tool of "quantitative" help from the government by injecting new money in the stock markets,
+I suddenly wondered what would happen if they distributed the money
+evenly among the US citizens, which according to Wikipedia is 328 million as of now. The answer is that a 2000 billion dollar package simply divided
+by 328 million is 6097 USD for each citizen. Then I had spin-off thoughts about creating government "companies" that just distributed the borrowed and
+printed money. What would happen and what is going on now? Does the whole system need an overhaul? The Private Equity scam is horrendous, by the way.
+At times it all seems like "fun and games", except without the fun at the moment. Something fundamental is shifting here, but I cannot see properly
+where it is leading.
+
+
+Recently I had thoughts of growing up in a world where China was the dominating cultural influence globally instead of the US. It occurred to me
+that I then would find "China normal" if I grew up with it, and maybe "fear" the western thinking more, inversely to how my childhood was, with American
+movies and influence everywhere. The future may turn out differently for the children growing up - I guess it already is, but attitude changes
+tend to move across generations (this based on solid research I read), so it's a fairly slow process.
+
 
 I spent an evening reading about the fear and uncertainty that was all over the articles in a "random" bank blog dating back to 2011, and kept
 reading until 2015 or so before I discontinued, now
