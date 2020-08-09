@@ -68,7 +68,7 @@ am not sure, but I am quite confident it somehow mostly enriches the already ric
 in this case realistic) view.
 
 
-So will the bubble burst? I know nobody knows.
+So, will the bubble burst? I know nobody knows.
 
 
 What am I currently doing? Investing small parts of my salary monthly in mutual funds. Exciting stuff.
