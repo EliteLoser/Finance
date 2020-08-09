@@ -25,7 +25,7 @@ where it is leading.
 
 
 Recently, I had thoughts of growing up in a world where China was the dominating cultural influence globally instead of the US. It occurred to me
-that I then would find "China normal" if I grew up with it, and maybe "fear" the western thinking more, inversely to how my childhood was, with American
+that I then would find "China normal", if I grew up with it, and maybe "fear" the western thinking more, inversely to how my childhood was, with American
 movies and influence everywhere. The future may turn out differently for the children growing up - I guess it already is, but attitude changes
 tend to move across generations (this based on solid research I read), so it's a fairly slow process.
 
