@@ -73,7 +73,7 @@ So, will the bubble burst? I know nobody knows.
 
 What am I currently doing? Investing the small parts of my salary I can afford to monthly in mutual funds. Almost exclusively index funds, as solid research
 indicated most of the managed options were unable to "beat the market". The
-"MIFID II" (currently) causes some new pricing ranges and options that partly make the research less relevant, but it is still solid enough as a base for me
+"MIFID II" (currently) causes some new pricing ranges and options that partly makes the research less relevant, but it is still solid enough as a base for me
 to decide on index funds mostly. Some exceptions (wish I remembered a couple of fund names I heard
 about in a podcast). Exciting stuff (sarcasm in statement: enabled).
 
