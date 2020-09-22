@@ -21,7 +21,8 @@ camouflage
 rhetoric to keep going with the QE - and I expect more tax proposals to follow, with similar reasoning. (Written 2020-09-22).
 
 
-I imagine people are already doing prognosis and whatnot of how much QE is estimated to be needed in such and such timeframes in various 
+I imagine people are already doing - 
+and have been for a long time - prognosis and whatnot of how much QE is estimated to be needed in such and such timeframes in various 
 scenarios. So this is the latest riveting development I see to support a further "bubble" (as written about in a former "text") on a more permanent
 basis. The wise and foresighted Swedish population is again on the ball.
 
