@@ -2,7 +2,7 @@
 
 ... and the rest will follow. I want to briefly summarize what I see as the first baby steps outlined to support a new macro-economic reality
 with QE - quantitative ease from governments in the form of purchasing financial instruments - as a new, permanent reality. Economy fails?
-"Don't worry, we got your back, but don't you dare call us socialists!" - Regards FED, Sweden. The reason I mention Sweden is their recent 
+"Don't worry, we've got your back, but don't you dare call us socialists!" - Regards FED, Sweden. The reason I mention Sweden is their recent 
 proposal for a bank
 tax with the reason being basically the need for money redistribution to support QE (as I most humbly _currently_ interpret it, reading a bit
 between the lines). In Denmark they're
