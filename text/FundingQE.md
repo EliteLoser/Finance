@@ -12,7 +12,7 @@ as well as operation of banks.
 
 
 The pattern that I see (or imagine) now, is increased taxation of banks, maybe insurance companies, and eventually who-knows-what, to support QE.
-We have come to depend on it. I read researchers claimed to have proved "QE addiction" in the markets.
+We have come to depend on it. I read researchers claimed to have proven "QE addiction" in the markets.
  With this in mind, it seems bad to let it go, and politicians
 seek to increase funding for QE _in sustainable and reasonable ways_. Whether this is reasonable or not in the ultimate, grander scheme of things,
 I do not have enough insight to know, but I notice it's what's being proposed. The reasoning to me seems solid. Probably there will be separate
