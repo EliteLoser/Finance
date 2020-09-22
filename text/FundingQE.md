@@ -34,3 +34,5 @@ when they need to cut costs, tend to punish people somehow. The world sure has a
 This is one
 financial baby step, but I see a future with sustained QE being formed here. Hindsight will tell if I'm blessed with foresight. To be continued (by
 the world)...
+
+If a pandemic cannot break capitalism (with QE...), what can...?
