@@ -35,4 +35,6 @@ This is one
 financial baby step, but I see a future with sustained QE being formed here. Hindsight will tell if I'm blessed with foresight. To be continued (by
 the world)...
 
+It occurs to me that, in a sense, this article is 10 years too late, but now it recently passed the pandemic test, at least a tremendous hit.
+
 If a pandemic cannot break capitalism (with QE...), what can...? Only the person in the mirror.
