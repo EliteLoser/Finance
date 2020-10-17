@@ -51,6 +51,8 @@ I also realize the world is a very dangerous place to live in...
 
 A friend of a friend once paid 2000 bitcoin for a pizza at a convention. Now the big nothing that is Bitcoin is worth billions of dollars, based on
 people's perception of value, their greed and willingness to take risk and gamble, and the underlying psychology that goes with it all.
+That pizza would have cost roughly 22 million USD based on the current exchange rate. Today it might perhaps strike most as a rather unwise price to pay
+for a pizza, but at the time it seemed acceptable.
 
 
 Lately, people invest in "everything". There are seemingly no limits to what people try to trade to generate money. Digital cryptographic 
