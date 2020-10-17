@@ -4,7 +4,7 @@ Just some small thoughts. 2020-10-16.
 
 I recently listened to a podcast where they talked about index funds. The guru I won't name for now said index funds target all companies in the index;
 good and bad. This seems obvious once stated, but it actually hadn't occurred to me in this way. I read research (Norwegian text: 
-https://fil.forbrukerradet.no/wp-content/uploads/2018/12/analyse-av-aksjefond-flaks-eller-dyktighet.pdf ) which basically concludes that index funds are the
+https://fil.forbrukerradet.no/wp-content/uploads/2018/12/analyse-av-aksjefond-flaks-eller-dyktighet.pdf ) which basically concludes that index funds is the
 better option. Best value for money historically based on the last 20 years or so. They also quoted numerous other research papers
 which showed little to no
 correlation mathematically between performance and consistency among fund managers. 
