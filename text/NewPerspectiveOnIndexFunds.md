@@ -13,7 +13,7 @@ not long ago.
 
 
 For this reason, I went for index funds because of the lower costs combined with seemingly better performance. 
-The MIFID (II) rules now causes different pricing ranges and options, more in favor
+The MIFID (II) regulation for finance markets now causes different pricing ranges and options, more in favor
 of actively managed funds. The disadvantage the nameless guru explained about index funds is precisely the bad companies within the index, and the "squeeze",
 or lack of money flow, into the good companies outside the index. Being listed on the index is sort of
 like being guaranteed money through both QE (quantitative ease) and investors/speculation.
@@ -24,7 +24,7 @@ can stand the test of time in my 20-year plan (I'm sure that will change along t
 cases that will also disappear for reasons we might not imagine now, due to technological advancement or similar.
 
 
-The cyclic nature of stock markets say it's a question of time before we hit a wall (markets crash), 
+The cyclic nature of stock markets says it's a question of time before we hit a wall (markets crash), 
 this time with inflated debt and more at stake than ever, but/and it also
 might explain the reason the fund managers don't deliver contrary to how their cycle or commodity or main industry that's targeted, etc. etc. performs.
 Why do, or rather did,
