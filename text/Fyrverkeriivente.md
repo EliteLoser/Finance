@@ -6,7 +6,9 @@ bærer nesten hele veksten på NASDAQ 100, så hvordan går det da om de leverer
 Selg! Selg! Selg!
 
 
-Hva skjer da? Vent og se (sikkert ingenting, vi har jo QE...).
+Hva skjer da? Vent og se (sikkert ingenting, vi har jo QE...). En annen ting å tenke på, er jo at 50 % av alle ordre i aksjemarkedet ligger der kortere
+tid enn 0,1 sekund ifølge min navnløse guru. Og 10 % er der i _ekstremt_ kort tid (mikro-/nanosekunder), igjen ifølge den navnløse guruen med
+et kontaktnettverk jeg tror ganske få kan hamle opp med. Noen vil tjene grovt på et fall - de fleste vil tape.
 
 
 Og leverer de bedre resultater enn forventet (som Apple sikkert kommer til å gjøre)? Da tar sjimpansene frem champagnen! Og festen fortsetter...?
