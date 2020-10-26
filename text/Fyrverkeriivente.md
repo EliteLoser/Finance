@@ -14,4 +14,7 @@ et kontaktnettverk jeg tror ganske få kan hamle opp med. Noen vil tjene grovt p
 Og leverer de bedre resultater enn forventet (som Apple sikkert kommer til å gjøre)? Da tar sjimpansene frem champagnen! Og festen fortsetter...?
 
 
+Valget i USA? Jeg frykter det verste (gjett hva det er). Fint inne i miksen.
+
+
 Jokkelædden
