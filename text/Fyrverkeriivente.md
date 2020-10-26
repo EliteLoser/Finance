@@ -29,4 +29,4 @@ Savner noe så enkelt som fornuft. Kanskje jeg må starte med meg selv.
 Finansmarkedene nå er som en global kort-skyskraper, det er min "følelse".
 
 
-Jokkelædden
+Hilsen med-sjimpanse Jokkelædden
