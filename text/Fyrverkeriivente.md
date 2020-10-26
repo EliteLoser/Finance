@@ -16,5 +16,17 @@ Og leverer de bedre resultater enn forventet (som Apple sikkert kommer til å gj
 
 Valget i USA? Jeg frykter det verste (gjett hva det er). Fint inne i miksen.
 
+Korona? Er ikke det bare innbilning, da? Syntes jeg så det på Fox News. Sikkert bare tullball, ass. Bare se på Kina, ingen resesjon! Det er beviset.
+Eventuelt er ikke Fox News en troverdig nyhetskilde. USA er polarisert mellom falske og mer nyanserte nyheter - og de to grupperingene som kjøper det ene
+eller det andre budskapet. Ispedd 24/7 religiøs sekt-sendinger på atten kanaler. USA har virkelig forfalt grovt, og i et forrykende økende tempo i det siste.
+En gang verdens ledestjerne, men nå et sirkus verden samtidig gråter over og ler av, i mangel av bedre emosjonelle reaksjoner. "Surrealistisk" er et godt
+dekkende ord for å beskrive nåværende global status, på veldig mange områder.
+
+
+Savner noe så enkelt som fornuft. Kanskje jeg må starte med meg selv.
+
+
+Finansmarkedene nå er som en global kort-skyskraper, det er min "følelse".
+
 
 Jokkelædden
