@@ -78,6 +78,9 @@ to decide on index funds mostly. Some exceptions (wish I remembered a couple of 
 about in a podcast). Exciting stuff (sarcasm in statement: enabled).
 
 
+NB. About index funds, I might have to rethink. See: https://github.com/EliteLoser/Finance/blob/master/text/NewPerspectiveOnIndexFunds.md
+
+
 Have a good one.
 
 
