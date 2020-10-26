@@ -7,7 +7,7 @@ Selg! Selg! Selg!
 
 
 Hva skjer da? Vent og se (sikkert ingenting, vi har jo QE...). En annen ting å tenke på, er jo at 50 % av alle ordre i aksjemarkedet ligger der kortere
-tid enn 0,1 sekund ifølge min navnløse guru. Og 10 % er der i _ekstremt_ kort tid (mikro-/nanosekunder), igjen ifølge den navnløse guruen med
+tid enn 0,1 sekund ifølge min navnløse guru. Og 10 % er der i _ekstremt_ kort tid (milli-/mikro-/nanosekunder), igjen ifølge den navnløse guruen med
 et kontaktnettverk jeg tror ganske få kan hamle opp med. Noen vil tjene grovt på et fall - de fleste vil tape.
 
 
