@@ -17,7 +17,7 @@ favorisert av leverandører, for ytterligere fordeler, som har fremkommet
 av nyheter den senere tiden.
 
 
-Forresten søkte jeg for en tid tilbake om et bankkort fra Norgesgruppen Finans og måtte oppgi informasjon selv fra NAV og 
+Forresten søkte jeg for en tid tilbake om et bankkort fra Norgesgruppen Finans, og måtte oppgi informasjon selv fra NAV og 
 tilsynelatende så godt som all tenkelig økonomisk
 informasjon om meg selv for å få det (og jeg fikk langt unna maks kredittgrense, så vet dere det). Omfanget av informasjonsinnhentingen
 opplevde jeg som relativt påtrengende av dem. Så er det også nevnt.
