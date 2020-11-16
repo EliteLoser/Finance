@@ -4,7 +4,7 @@
 Jeg må innrømme at jeg har tatt meg selv i å forsøke å bekjempe monopol-virksomhet. Det er ikke lenger lett. Uansett hva du kjøper av mat i Norge, så er det
 fra noen få, store leverandører - med noen få hederlige unntak. Hvorfor sluker "konglomeratene"/gigantselskapene alt? 
 Konglomerat er et ord jeg egentlig ikke vet helt hva betyr, men som jeg
-har tolket som at betyr sammenspleisinger av flere store industrikonsern(?). I Norge finner du merket "Orkla" på utrolig mange matvarer. Mondelez er et annet
+har tolket som at betyr sammenspleisninger av flere store industrikonsern(?). I Norge finner du merket "Orkla" på utrolig mange matvarer. Mondelez er et annet
 omfattende merke, i alle fall når det gjelder snop/sjokolade (av egen erfaring...).
 
 
