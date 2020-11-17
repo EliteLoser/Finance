@@ -30,7 +30,7 @@ produkter om de går konkurs.
 
 Forsøk på å støtte Coop og Rema/Kolonial er naturlige 
 for meg, men kanskje er det bare fordi jeg heier på "the underdog"? Jeg kan ikke se
-at samfunnet verken nasjonalt, globalt eller etisk er tjent med at Coop forsvinner og Norgesgruppen spiser opp det meste av markedsandelen som står igjen.
+at samfunnet hverken nasjonalt, globalt eller etisk er tjent med at Coop forsvinner og Norgesgruppen spiser opp det meste av markedsandelen som står igjen.
 En del av det positive mangfoldet vil lide. 
 For ikke å snakke om at det slett ikke vil være til forbrukernes gunst med lavere konkurranse blant aktørene. Høyere priser blir typisk en følge. Mobilmarkedet
 i Norge er også under dette regimet. Hvis jeg husker riktig (tilgi meg dersom jeg ikke gjør det), så er mobilprisene ca. 70 % høyere i Norge enn i nærliggende
