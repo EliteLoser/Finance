@@ -43,6 +43,7 @@ stock market performance - it might save the kid's school trip or get grandma he
 not truly exist). In any case, it is fair in a way that it currently is not. Even if the government decides to make the amounts ridiculously low,
 it would be a start.
 
-Crap, but what about the rich people who get tax breaks as well, then...? Figure it out.
+Crap, but what about the rich people who then get (potentially huge) tax breaks as well...? Figure it out. 
+Ugh, maybe all I came up with was another reason for "uneven taxation". Bummer.
 
 Thanks. Last day of the weekend and then back to the home office COVID hustle.
