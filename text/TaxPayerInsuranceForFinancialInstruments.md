@@ -7,7 +7,7 @@ The purpose of taxes, as I see it, is to distribute wealth according to needs th
 what we call politicians, and these politicans are human, meaning a (negative) diversity arises, but let's stick to the basics of my interpretation.
 Offering free health care is one such need that is likely to be better handled by a "paternal/maternal/parental state", since it is in line
 with being kind and humane. Roads, military service, trains, power grids and food supply are other things I think are natural to include, but
-you can stretch it further (and we can, and should, do). A lot is needed, the world is complex. There are many laws. Not enough laws are accurate and
+you can stretch it further (and we can, and should, do). A lot is needed, the world is complex. There are many laws. Not enough laws are accurate, 
 logical, sensical and not to mention up to date.
 
 Anyway, if you as a tax payer insure stocks through QE (quantitative ease), should you not be offered any rewards, then? Implicitly even the
