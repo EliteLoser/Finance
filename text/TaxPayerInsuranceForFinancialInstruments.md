@@ -48,6 +48,7 @@ a percentage of annualized over a period over years ... something ... something 
 reward tax payers with. Just an idea.
 
 Crap, but what about the rich people who then get (potentially huge) tax breaks as well...? Figure it out. 
-Ugh, maybe all I came up with was another reason for "uneven taxation". Bummer.
+Ugh, maybe all I came up with was another reason for "uneven taxation". Bummer. Maybe a limit in income that you need to be below to get the breaks.
+Estimation for Norway, maybe... 1-2 million per year, then you don't "need" the tax cuts.
 
 Thanks. Last day of the weekend and then back to the home office COVID hustle.
