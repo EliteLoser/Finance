@@ -1,5 +1,7 @@
 # Tax Payers Insure Stocks
 
+Initially written 2020-12-06.
+
 This sounds questionable, right? At the very least at the scale that has taken place recently and now for the last 13 years since the financial
 crisis of 2007 when the Lehman bank went under in the US and caused a major crisis in its wake.
 
