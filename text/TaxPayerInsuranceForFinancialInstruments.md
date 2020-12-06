@@ -14,7 +14,7 @@ Anyway, if you as a tax payer insure stocks through QE (quantitative ease), shou
 often-used example of the low paid fast food worker is contributing to insure stocks on the stock markets through their work and subsequently taxes.
 What I suggest is completely logical: A reverse tax that pays back money to every single person that paid taxes (reduction in taxes or downright
 payouts), in line with how much the stock market rose in that fiscal year (time period for historical/practical reasons). If you think about it,
-is it really so strange that a tax payer that assumes stock market risk without owning stocks can also get benefits, without owning stocks?
+is it really so strange that a tax payer that assumes stock market risk without owning stocks can also get benefits without owning stocks?
 
 It's actually similar to how the tax system in Norway now rewards people who are invested in "80 % or more stocks papers", if I remember correctly.
 If you own 10,000 kroner worth of Equinor stocks, you will get a discount in taxes based on the value, that's again later countered by another tax. It
