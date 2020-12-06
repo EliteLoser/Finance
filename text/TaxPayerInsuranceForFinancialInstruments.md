@@ -43,6 +43,10 @@ stock market performance - it might save the kid's school trip or get grandma he
 not truly exist). In any case, it is fair in a way that it currently is not. Even if the government decides to make the amounts ridiculously low,
 it would be a start.
 
+Somehow it should be a mix of tax money spent on QE and the income (losses should not go below 0, maybe, not sure) from the stock markets in
+a percentage of annualized over a period over years ... something ... something (adaptive and controlled by thought as well) to figure out an amount to
+reward tax payers with. Just an idea.
+
 Crap, but what about the rich people who then get (potentially huge) tax breaks as well...? Figure it out. 
 Ugh, maybe all I came up with was another reason for "uneven taxation". Bummer.
 
