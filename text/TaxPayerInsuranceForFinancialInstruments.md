@@ -1,6 +1,6 @@
 # Tax Payers Insure Stocks
 
-This is ridiculous, right? At the very least at the scale that has taken place recently and now for the last 13 years since the financial
+This sounds questionable, right? At the very least at the scale that has taken place recently and now for the last 13 years since the financial
 crisis of 2007 when the Lehman bank went under in the US and caused a major crisis in its wake.
 
 The purpose of taxes, as I see it, is to distribute wealth according to needs that are defined by an elite. Sadly the elite we have is
