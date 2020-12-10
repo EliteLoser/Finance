@@ -1,4 +1,4 @@
-# Tax Payers Insure Stocks
+# Tax Payers Insure Stocks - So let's reward us
 
 Initially written 2020-12-06.
 
