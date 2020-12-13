@@ -13,7 +13,7 @@ you can stretch it further (and we can, and should, do). A lot is needed, the wo
 logical, sensical and not to mention up to date.
 
 Anyway, if you as a tax payer insure stocks through QE (quantitative ease), should you not be offered any rewards, then? Implicitly even the
-low paid workers in any job is contributing to insure stocks on the stock markets through their work, and subsequently taxes.
+low paid workers in any job are contributing to insure stocks on the stock markets through their work, and subsequently taxes.
 What I suggest is completely logical: A reverse tax that pays back money to every single person that paid taxes (reduction in taxes or downright
 payouts), in line with how much the stock market rose in that fiscal year (time period for historical/practical reasons). If you think about it,
 is it really so strange that a tax payer who assumes stock market risk without owning stocks can also get benefits without owning stocks?
