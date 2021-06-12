@@ -251,23 +251,25 @@ function Get-PeriodicDevelopment {
         [Bool] $EndDone = $False
         if ($DottedEuropeToUS) {
             Write-Verbose "Setting `$DateReplace regexes to Europe-dotted > US format for the DateTime casts."
-            $DateReplace = @('^\s*(\d\d)\.(\d\d)\.(\d\d(?:\d{2})?)\s*$', '$2/$1/$3')
+            $DateReplace = @('^\s*(\d\d)\.(\d\d)\.(\d\d).*$', '$2/$1/$3')
         }
-        #[Decimal] $RangeCounter = 1
-        $Global:SvendsenTechFinanceTechDataStuffVariableCSVImportCache | ForEach-Object {
-        
-            if ($DateReplace.Count -gt 0) {
+        [Decimal] $RangeCounter = 0
+        # Optimization.
+        $DateReplaceCount = $DateReplace.Count
+        foreach ($t in $Global:SvendsenTechFinanceTechDataStuffVariableCSVImportCache) {
+            ++$RangeCounter
+            if ($DateReplaceCount -gt 0) {
                 if (++$SpawnAndForget -eq 1) {
-                    Write-Verbose "Performing regex -replace on all dates in property/header/column `$_.$DateName"
+                    Write-Verbose "Performing regex -replace on all dates in property/header/column `$t.$DateName"
                     # Keep it in mind anyway!
                     if ($SpawnAndForget -ge ([System.Int32]::MaxValue - 5)) {
                         $SpawnAndForget = 1
                     }
                 }
-                $CurrentDate = [DateTime] ($_.$DateName -replace $DateReplace)
+                $CurrentDate = [DateTime] ($t.$DateName -replace $DateReplace)
             }
             else {
-                $CurrentDate = [DateTime] $_.$DateName
+                $CurrentDate = [DateTime] $t.$DateName
             }
         
             if (-not $StartDone -and $CurrentDate -ge $StartDate) {
@@ -275,8 +277,8 @@ function Get-PeriodicDevelopment {
                 $StartDone = $True
                 $UsedStartDate = $CurrentDate
             
-                Write-Verbose "Found start date as $($CurrentDate.ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
-                $StartClose = [Decimal] $_.$RateName
+                Write-Verbose "Found start date as $($CurrentDate.ToString('yyyy\-MM\-dd')) (close: $($t.$RateName))."
+                $StartClose = [Decimal] $t.$RateName
 
             }
             if (-not $EndDone -and $CurrentDate -ge $EndDate) {
@@ -284,9 +286,9 @@ function Get-PeriodicDevelopment {
                 $EndDone = $True
                 $UsedEndDate = $CurrentDate
 
-                Write-Verbose "Found end date as $($CurrentDate.ToString('yyyy\-MM\-dd')) (close: $($_.$RateName))."
-                $EndClose = [Decimal] $_.$RateName
-
+                Write-Verbose "Found end date as $($CurrentDate.ToString('yyyy\-MM\-dd')) (close: $($t.$RateName))."
+                $EndClose = [Decimal] $t.$RateName
+                break
             }
 
         }
@@ -305,7 +307,7 @@ function Get-PeriodicDevelopment {
         [PSCustomObject] @{
             UsedStartDate = $UsedStartDate
             UsedEndDate = $UsedEndDate
-            PercentDevelopment = (($EndClose - $StartClose) / $EndClose) * 100
+            PercentDevelopment = [Math]::Round(((($EndClose - $StartClose) / $EndClose) * 100), 4)
         }
     }
 }
