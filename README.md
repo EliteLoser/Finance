@@ -9,7 +9,7 @@ This is against the SnP 500 US stock index as of March 16, 2020, with corona ram
 
 It looks at all 14-day periods, or as close to it as my algorithm based on date math, allows and then I simply sort out the extremities.
 
-This is where I get the CSV file: https://finance.yahoo.com/quote/%5EGSPC/history/
+This is where I used to get the CSV file, it appears no longer available for free download as of 2021-06-12: https://finance.yahoo.com/quote/%5EGSPC/history/
 
 Look here for some code examples of how you can do this (requires patience or fast hardware...): https://github.com/EliteLoser/Finance/blob/master/SnP500/snp500-14-dagers-analyse.txt
 
