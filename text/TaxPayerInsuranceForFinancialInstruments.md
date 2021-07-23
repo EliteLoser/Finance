@@ -56,4 +56,4 @@ Crap, but what about the rich people who then get (potentially huge) tax breaks 
 Ugh, maybe all I came up with was another reason for "uneven taxation". Bummer. Maybe a limit in income that you need to be below to get the breaks.
 Estimation for Norway, maybe ... 1-2 million per year, then you don't "need" the tax cuts. 800k? Something.
 
-Thanks. Last day of the weekend and then back to the home office COVID hustle.
+Thanks. Last day of the weekend and then back to the home office COVID hassle.
