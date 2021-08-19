@@ -38,7 +38,7 @@ heard that most people are comfortable with significantly less risk than they cl
 manager who said people came to him when their value was reduced with a certain fraction of what they said they could handle to lose. To my detriment,
 I forgot the fraction/percentage! Was it 20 %? One third? Something along those lines is what I remember. Or was it half...
 
-With a time horizon of 5-10 years things change regarding how much risk you can take. As long as you are willing to see the value of your money fluctuate, and
+With a time horizon of 5-10 years, things change regarding how much risk you can take. As long as you are willing to see the value of your money fluctuate, and
 quite possibly go down for years, you can still "win" if you wait it out. This is why the "Japan scenario" is troublesome; it means waiting up to 30 years.
 Given my age, that is too long to wait. 
 I choose to gamble with about 1/3 of what I have in funds with a timeframe of 5-10 years in mind. I should really just ignore it and not check my bank
