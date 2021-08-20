@@ -33,7 +33,9 @@ I already regret the sale. I had decided
 on a risk level - and it's best to stick to that if you are actually confident that you are comfortable with the risk you decided on previously. Knowing myself
 a bit, I know it's quite likely I will repurchase funds soon, maybe already next week. 
 I will take it as an opportunity to rebalance the portfolio and possibly make some changes. Might
-go for more active funds over passive. The vast majority is currently in passive index funds. About "how much risk/losses am I comfortable with", I have
+go for more active funds over passive. The vast majority is currently in passive index funds.
+
+About "how much risk/losses am I comfortable with", I have
 heard that most people are comfortable with significantly less risk than they claim before calamity strikes (the stock markets...). It was a fund
 manager who said people came to him when their value was reduced with a certain fraction of what they said they could handle to lose. To my detriment,
 I forgot the fraction/percentage! Was it 20 %? One third? Something along those lines is what I remember. Or was it half...
