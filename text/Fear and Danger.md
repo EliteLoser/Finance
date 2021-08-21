@@ -25,7 +25,7 @@ It just keeps going.
 My "career" with savings/investing started in 2013. From 2013 to 2021 I have sold _everything_ 3 times. Each time, I was driven by fear after
 talking to friends/family who warned me of imminent danger. Driven by fear of being in
 danger (in the financial world...). Each time, I was utterly wrong, and missed out on decent/huge profits in the longer run.
-I have learned a lot about myself and how I deal with this type of psychological risk as time went by.
+I have learned a lot about myself and how I deal with this type of psychological risk as time has gone by.
 Yesterday, I once again sold, but this time not everything. You see,
 I read the famous Michael Burry had predicted a fall in prices. Surely a guy who was right in 2007 can't be wrong now... Or can he?
 I reduced my fund ownership share by about 10 %. Today when the sales orders went through, and as I wait for them to complete, 
