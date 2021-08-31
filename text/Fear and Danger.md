@@ -2,7 +2,7 @@
 
 Initially written 2021-08-18.
 
-As I'm reading in "Factfulness", a good book by Hans Rosling, Ola Rosling and Anna Rosling Rönning, there is a difference betwen what we fear and what is
+As I'm reading in "Factfulness", a good book by Hans Rosling, Ola Rosling and Anna Rosling Rönnlund, there is a difference betwen what we fear and what is
 (the most) dangerous. It just happened to occur to me that (within the financial world!) 
 I fear corrections in the stock market, being invested with a not entirely insignificant amount
 (to me - I'm no millionaire). But the danger is the "global Japan scenario": a cataclysmic crash that spins the world decades back in "fiscal time".
