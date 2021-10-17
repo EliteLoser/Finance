@@ -41,7 +41,7 @@ Once specialisation arrived, a need appeared for ways to efficiently exchange se
  in society through these inventions without "doing anything"? Fascinating.
  
  If you say that "Bitcoin has no value", you are factually incorrect. Anyone owning 1 bitcoin can exchange it for dollars or other currencies which 
- can in turn be exhanged for goods and services. The reason it has value is because of a shared belief that is has value. We believe that others believe that 
+ can in turn be exchanged for goods and services. The reason it has value is because of a shared belief that is has value. We believe that others believe that 
  it has value. Lately, we are even seeing the birth of direct crypto coin payment to/from "established" entities in society. As 
  long as people believe bitcoin has value, it has value.
  
