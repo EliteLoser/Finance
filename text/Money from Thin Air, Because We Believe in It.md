@@ -65,7 +65,7 @@ Once specialisation arrived, a need appeared for ways to efficiently exchange se
  
  If you take the example of different cultures where one values gold and the other does not, the one that does not value it will soon begin to value it 
  because the other culture values it. This is what happened with Bitcoin. Because other people started to believe it has value, the rate skyrocketed, and 
- it became a self-reenforcing spiral. Can you say that this is a "good circle"? People tend to talk about vicious circles. Would be nice to have benign 
+ it became a self-reinforcing spiral. Can you say that this is a "good circle"? People tend to talk about vicious circles. Would be nice to have benign 
  circles too.
  It has value if you believe others believe it has value. Belief is a fundamental aspect of human existence. In all world views, apparently, there are 
  contradictory beliefs in the same people. Again referring to the book, Yuval explains that this is at the core of humankind, this balancing of and negotiating the beliefs/concepts that are contradictory. Even if I personally believe that bitcoin is of no intrinsic value, it does have value because enough people believe 
