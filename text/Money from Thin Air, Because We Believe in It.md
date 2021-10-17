@@ -2,12 +2,12 @@
 
 This note is mostly for myself to sum up my thoughts about the new crypto currencies that have appeared. I am reading Sapiens, A Brief History of Humankind,
 by Yuval Noah Harari (but he has no blame for what I am about to write!). It explains at a fundamental level what money is, and how money works. Money appeared 
-to solve the problem of bartering services after specialisation occurred due to denser populations and increased ability to transport people and goods. In an 
-earlier stage of civilization, specialisation did not occur because people were in smaller groups that were not large enough for someone to work full-time 
+to solve the problem of bartering services after specialization occurred due to denser populations and increased ability to transport people and goods. In an 
+earlier stage of civilization, specialization did not occur because people were in smaller groups that were not large enough for someone to work full-time 
 making shoes, for instance, or providing health care for someone else. Once cities formed, the number of people that frequented, or could frequent, a stationary 
 place for getting shoes grew.
 
-Once specialisation arrived, a need appeared for ways to efficiently exchange services. I asked my rather wise father if he could define money for me,
+Once specialization arrived, a need appeared for ways to efficiently exchange services. I asked my rather wise father if he could define money for me,
  and his response was that it is "an aiding tool for the exchange of services or goods". This is surprisingly accurate. What makes money worth something 
  is the shared 
  belief that it can be exchanged for the goods and services you may want at any given moment, almost anywhere you want. Just as Roman 
