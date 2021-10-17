@@ -71,6 +71,10 @@ Once specialization arrived, a need appeared for ways to efficiently exchange se
  contradictory beliefs in the same people. Again referring to the book, Yuval explains that this is at the core of humankind, this balancing of and negotiating the beliefs/concepts that are contradictory. Even if I personally believe that bitcoin is of no intrinsic value, it does have value because enough people believe 
  it has value to others.
  
+ One thing that separates crypto coins from traditional currencies is that new currencies can be invented ad hoc and spring into existence. With gold and silver
+ coins (once society reached that stage) you cannot simply grab a rock and say this is a new coin, because others will not accept it. Some crypto currencies 
+ are essentially "random rocks as coins", while bitcoin can be compared to the gold of crypto. Maybe Ethereum is the silver.
+ 
  I seem to be repeating myself. Will read and review tomorrow or later. Going to bed.
  
  Be good so you deserve to be well.
