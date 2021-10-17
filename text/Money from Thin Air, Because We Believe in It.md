@@ -58,7 +58,7 @@ Once specialization arrived, a need appeared for ways to efficiently exchange se
  It is about believing that others believe. The concept of money works because people share a belief that the items, be it coins, gold bars or dollar bills, can 
  be used anywhere in exchange for goods, property and services.
  
- Money has enabled our complex societal structures. Without money, we could not have reached societies as large and complex as we have today.
+ Money has enabled our complex societal structures. Without money, we could not have created societies as large and complex as we have today.
  
  If you believe bitcoin has no value, but believe that others believe that it has value, then it has value despite your belief, and your belief must change. 
  Is that a paradox?
