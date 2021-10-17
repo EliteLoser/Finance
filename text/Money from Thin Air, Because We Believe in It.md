@@ -26,7 +26,7 @@ Once specialization arrived, a need appeared for ways to efficiently exchange se
  what it is and can relate to its success at the time of writing (2021-10-17).
  
  Smarter and more knowledgeable people than me have commented on this. As I started out saying: this is mostly a note for myself to collect my thoughts to see 
- if what I write makes sense tomorrow, or in a week. Yuval Noah Harari did not comment on Bitcoin at all in his book from 2014, before Bitcoin rose to 
+ if what I write makes sense tomorrow or in a week. Yuval Noah Harari did not comment on Bitcoin at all in his book from 2014, before Bitcoin rose to 
  proper mainstream fame. I do wonder what remarks he would have made about it, but I am quite confident he would at least acknowledge that is has value 
  because of it being in our shared imagined realities, just like Peugeot (the example in Sapiens) - and Apple (the company) - exist 
  because we share a belief that they do. That the word 
