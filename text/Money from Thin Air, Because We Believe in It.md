@@ -8,7 +8,7 @@ making shoes, for instance, or providing health care for someone else. Once citi
 place for getting shoes grew.
 
 Once specialisation arrived, a need appeared for ways to efficiently exchange services. I asked my rather wise father if he could define money for me,
- and his response was that it is "an aiding tool for the exchange of services or goods". This is surprisingly accurate. What makes money worth anything 
+ and his response was that it is "an aiding tool for the exchange of services or goods". This is surprisingly accurate. What makes money worth something 
  is the shared 
  belief that it can be exchanged for the goods and services you may want at any given moment, almost anywhere you want. Just as Roman 
  denarius coins were accepted as money because some 
