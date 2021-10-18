@@ -1,6 +1,6 @@
 # Bitcoin, and why it has value.
 
-This note is mostly for myself to sum up my thoughts about the new crypto currencies that have appeared. I am reading Sapiens, A Brief History of Humankind,
+This note is mostly for myself to sum up my thoughts about the new crypto currencies that have appeared. I am making it public, though. I am reading Sapiens, A Brief History of Humankind,
 by Yuval Noah Harari (but he has no blame for what I am about to write!). It explains at a fundamental level what money is, and how money works. Money appeared 
 in order to solve the problem of bartering services after specialization occurred due to denser populations and increased ability to transport people and goods. In an 
 earlier stage of civilization, specialization did not occur because people were in smaller groups that were not large enough for someone to work full-time 
