@@ -2,7 +2,7 @@
 
 This note is mostly for myself to sum up my thoughts about the new crypto currencies that have appeared. I am reading Sapiens, A Brief History of Humankind,
 by Yuval Noah Harari (but he has no blame for what I am about to write!). It explains at a fundamental level what money is, and how money works. Money appeared 
-to solve the problem of bartering services after specialization occurred due to denser populations and increased ability to transport people and goods. In an 
+in order to solve the problem of bartering services after specialization occurred due to denser populations and increased ability to transport people and goods. In an 
 earlier stage of civilization, specialization did not occur because people were in smaller groups that were not large enough for someone to work full-time 
 making shoes, for instance, or providing health care for someone else. Once cities formed, the number of people that frequented, or could frequent, a stationary 
 place for getting shoes, grew.
