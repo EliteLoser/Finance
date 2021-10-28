@@ -40,7 +40,7 @@ strategies.
 As the nameless guru pointed out, bad companies get to survive - and prices are 
 in general inflated and become "extra high" within the index due to mandates of countless financial instruments
 like mutual funds and hedge funds - and stuff I don't know much about - and where/what they are allowed to buy/invest in (within the index only, 
-usually evenly distributed).
+it can be evenly distributed).
 The filth isn't washed out and companies without earnings or cash may survive based on
 the constant flow of money in to not only all the "worthy" companies but the aforementioned "bad" companies as well. Some are downright scams.
 
