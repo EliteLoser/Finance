@@ -28,7 +28,7 @@ The cyclic nature of stock markets says it's a question of time before we hit a 
 this time with inflated debt and more at stake than ever, but/and it also
 might explain the reason the fund managers don't deliver contrary to how their cycle or commodity or main industry that's targeted, etc. etc. performs.
 Why do, or rather did,
-index funds perform better? Lower costs is the primary reason I suspect, plus shear _stability_/volume.
+index funds perform better? Lower costs is the primary reason I suspect, plus sheer _stability_/volume.
 It seems unfair to blame it on the fund managers' ineptitude, although as a retarded small
 investor myself, I can say that unwise trades have been performed during human existence. This should apply to other humans, including some of the best.
 There is sure to be differences
