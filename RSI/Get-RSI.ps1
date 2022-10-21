@@ -8,6 +8,8 @@ function Get-RSI {
         for a series of 15 numbers, to get 14 percentages, as 14 numbers is the standard to
         base the calculations on.
 
+        MIT License. Author: Joakim Borger Svendsen. Copyright (C) Svendsen Tech 2022.
+        
     .DESCRIPTION
         You can specify a sample count different from 14, and the (minimum) required number
         of numbers is then your sample count plus one ($FirstStepSampleCount+1).
