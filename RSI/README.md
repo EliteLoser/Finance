@@ -60,9 +60,9 @@ parameter).
 # PARAMETER SecondStepSampleCount
 Sets the second step sample count which should be evenly divisible by $FirstStepSampleCount,
 used for calculating the second step of the RSI formula. Default 14 * 14 (14 times
-the default $FirstStepSampleCount). 14*14 = 196.
+the default $FirstStepSampleCount). `14*14 = 196`.
 
-The traditional RSI formula uses 14*14 numbers. This parameter allows you to
+The traditional RSI formula uses `14*14` numbers. This parameter allows you to
 specify a different count for your RSI calculation. If you provide the switch
 parameter -GetSecondStep, the number of -Numbers you need is this number plus one
 (to get $SecondStepSampleCount percentages, the first calculated and used percentage 
@@ -123,9 +123,9 @@ The "RsiStepOnesString" is a convenience property for visual inspection of the 1
 
 The average is also calculated for potential elucidation.
 
-The "PreviousXAverageGain" number by default represents the average gain of the previous 13 rates (when 14 is the first step sample count) and, similarly, the "PreviousXAverageLoss" number represents the average loss of the previous 13 rates. The numbers are percentages.
+The "PreviousXAverageGain" number by default is the average gain based on the previous 13 average gain percentages for the RSI step one periods, which are then again averaged to produce this number. The same logic applies to "PreviousXAverageLoss", only for losses.
 
-In the example above you have 0.0387 as the average gain and -0.04717 as the average loss. This is as expected when the RSI step two is below 50, so it also serves as a sanity-check of the calculations. If the gains are higher than the losses, the RSI step two will be higher than 50. At least typically.
+In the example above you have `0.0387` as the average gain and `-0.04717` as the average loss. This is as expected when the RSI step two is below 50, so it also serves as a sanity-check of the calculations. If the gains are higher than the losses, the RSI step two will be higher than 50. At least typically.
 
 Some other, self-explanatory properties are included for convenience.
 
