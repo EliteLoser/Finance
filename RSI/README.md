@@ -184,6 +184,13 @@ The part `| ?{ ++$Counter % 2 -eq 0 }` is a Where-Object filter that simply filt
 If you want only step one, it will look like this:
 
 ```
+PS C:\> $BitcoinPrices = gci "$MyHome\coinmarketcapdata_5m\*.json" | 
+    sort-object Name |
+    select-object -Last 15 |
+    %{ ((gc -raw $_.fullname) |
+    ConvertFrom-Json).data.where({
+    $_.slug -eq 'bitcoin'}).quote.usd.price }
+    
 PS C:\> Get-RSI -Numbers $BitcoinPrices
 
 
