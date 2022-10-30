@@ -144,7 +144,8 @@ PS C:\> $EthPrices = gci "$MyHome\coinmarketcapdata_5m\*.json" |
 PS C:\> 10/60*197 # hours back in time
 32.8333333333333
 PS C:\> $EthPrices.Count                                                                                               
-197PS C:\> $EthPrices[0,-1]                                                                                               
+197
+PS C:\> $EthPrices[0,-1]                                                                                               
 1615.3266220321711                                                                                                     
 1579.9086598714698
 PS C:\> Get-RSI -Numbers $EthPrices -GetSecondStep                                                                                                                                                                                                
