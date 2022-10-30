@@ -68,3 +68,107 @@ parameter -GetSecondStep, the number of -Numbers you need is this number plus on
 (to get $SecondStepSampleCount percentages, the first calculated and used percentage 
 requires a "starting number").
 
+# Example where I get the RSI number for Ethereum prices for the last approximately 16.4 hours
+
+Here I get the RSI value of the last 197 five-minute intervals as of the evening of 2022-10-30 (happy Halloween!).
+
+```
+PS C:\> $EthPrices = gci "$MyHome\coinmarketcapdata_5m\*.json" | 
+    sort-object LastWriteTime | 
+    select-object -last 197 | 
+    %{ ((gc -raw $_.fullname) | 
+    ConvertFrom-Json).data.where({
+    $_.slug -eq 'ethereum'}).quote.usd.price }
+PS C:\> $EthPrices.Count                                                                                               
+197
+PS C:\> $EthPrices[0,-1]                                                                                               
+1619.804828821538
+1588.1437982934824
+PS C:\> Get-RSI -Numbers $EthPrices -GetSecondStep                                                                     
+
+RsiStepOnesCalulationsForStepTwo : {@{Numbers=System.Decimal[]; Percentages=System.Object[]; Gains=System.Object[];    
+                                   AverageGain=0.0332195783966708; Losses=System.Object[];
+                                   AverageLoss=-0.0143569386067286; SampleCount=14; RSIStepOne=69.8234769777225;       
+                                   DateTime=10/30/2022 11:11:06 PM}, @{Numbers=System.Decimal[];
+                                   Percentages=System.Object[]; Gains=System.Object[];
+                                   AverageGain=0.0828497999703561; Losses=System.Object[];
+                                   AverageLoss=-0.0259971421649874; SampleCount=14; RSIStepOne=76.1158727521607;       
+                                   DateTime=10/30/2022 11:11:06 PM}, @{Numbers=System.Decimal[];
+                                   Percentages=System.Object[]; Gains=System.Object[];
+                                   AverageGain=0.0182880118722195; Losses=System.Object[];
+                                   AverageLoss=-0.0662359869957693; SampleCount=14; RSIStepOne=21.6364726197847;       
+                                   DateTime=10/30/2022 11:11:06 PM}, @{Numbers=System.Decimal[];
+                                   Percentages=System.Object[]; Gains=System.Object[];
+                                   AverageGain=0.0286163046781352; Losses=System.Object[];
+                                   AverageLoss=-0.0681690762665304; SampleCount=14; RSIStepOne=29.5667634913746;       
+                                   DateTime=10/30/2022 11:11:06 PM}...}
+RsiStepOnesString                : 69.82 - 76.12 - 21.64 - 29.57 - 15.51 - 72.93 - 37.96 - 26.01 - 72.43 - 45.24 -     
+                                   26.99 - 70.55 - 72.06 - 26.68
+RsiStepOnesAverage               : 47.39
+SecondStepSampleCount            : 196
+PreviousXAverageGain             : 0.0387438591514454
+PreviousXAverageLoss             : -0.0471697208659479
+RSIStepTwo                       : 44.08
+Numbers                          : {1619.804828821538, 1619.8921283607126, 1619.9369185512846, 1621.1149589714098...}  
+DateTime                         : 10/30/2022 11:11:06 PM
+
+PS C:\>
+```
+
+Take note that this method relies on the "LastWriteTime" property being correct on the files. I recommend including an ISO8601 timestamp in the filename (or a variant of ISO8601, rather) so you can sort on the filename if something happens to the files, they are moved to another disk, etc. My files are named e.g. `crypto-json-coinmarketcap-top-100-2022-10-26_21_00_29.json`, which technically isn't ISO8601.
+
+The "RsiStepOnesCalulationsForStepTwo" property is there in case you want to perform math operations or similar on the 14 RSI step ones that are combined to get the second step RSI number.
+
+The "RsiStepOnesString" is a convenience property for visual inspection of the 14 RSI step ones that form the RSI step two number, in chronological order.
+
+The average is also calculated for potential elucidation.
+
+The "PreviousXAverageGain" number by default represents the average gain of the previous 13 rates (when 14 is the first step sample count) and, similarly, the "PreviousXAverageLoss" number represents the average loss of the previous 13 rates. The numbers are percentages.
+
+In the example above you have 0.0387 as the average gain and -0.04717 as the average loss. This is as expected when the RSI step two is below 50, so it also serves as a sanity-check of the calculations. If the gains are higher than the losses, the RSI step two will be higher than 50. At least typically.
+
+Some other, self-explanatory properties are included for convenience.
+
+If you want to look at periods longer back in time than the minimum ~16.4 hours required with 5-minute samples and 197 files, you can do it in a myriad of ways. One is by skipping every other file (experienced programmers immediately smell the modulus operator here).
+
+Example:
+
+```
+PS C:\> $EthPrices = gci "$MyHome\coinmarketcapdata_5m\*.json" | sort-object Name | select-object -last (197*2) | %{ ((gc -raw $_.fullname) | ConvertFrom-Json).data.where({$_.slug -eq 'ethereum'}).quote.usd.price } | ?{ ++$Counter % 2 -eq 0 }
+PS C:\> 10/60*197 # hours back in time
+32.8333333333333
+PS C:\> $EthPrices.Count                                                                                               
+197PS C:\> $EthPrices[0,-1]                                                                                               
+1615.3266220321711                                                                                                     
+1579.9086598714698
+PS C:\> Get-RSI -Numbers $EthPrices -GetSecondStep                                                                                                                                                                                                
+RsiStepOnesCalulationsForStepTwo : {@{Numbers=System.Decimal[]; Percentages=System.Object[]; Gains=System.Object[];    
+                                   AverageGain=0.118552230142012; Losses=System.Object[];
+                                   AverageLoss=-0.0662788328239305; SampleCount=14; RSIStepOne=64.1408582732962;       
+                                   DateTime=10/30/2022 11:39:41 PM}, @{Numbers=System.Decimal[];
+                                   Percentages=System.Object[]; Gains=System.Object[]; AverageGain=0.123684936438782;  
+                                   Losses=System.Object[]; AverageLoss=-0.0835699033685914; SampleCount=14;
+                                   RSIStepOne=59.677707190692; DateTime=10/30/2022 11:39:41 PM},
+                                   @{Numbers=System.Decimal[]; Percentages=System.Object[]; Gains=System.Object[];     
+                                   AverageGain=0.140858104783539; Losses=System.Object[];
+                                   AverageLoss=-0.159408976221101; SampleCount=14; RSIStepOne=46.9109381928425;        
+                                   DateTime=10/30/2022 11:39:41 PM}, @{Numbers=System.Decimal[];
+                                   Percentages=System.Object[]; Gains=System.Object[];
+                                   AverageGain=0.0448580566053057; Losses=System.Object[];
+                                   AverageLoss=-0.058203856808144; SampleCount=14; RSIStepOne=43.5253481325834;        
+                                   DateTime=10/30/2022 11:39:41 PM}...}
+RsiStepOnesString                : 64.14 - 59.68 - 46.91 - 43.53 - 30.8 - 48.75 - 63.91 - 75.73 - 6.85 - 62.67 -       
+                                   31.43 - 42.75 - 55.13 - 32.11
+RsiStepOnesAverage               : 47.46
+SecondStepSampleCount            : 196
+PreviousXAverageGain             : 0.0694764665884682
+PreviousXAverageLoss             : -0.0780496502403001
+RSIStepTwo                       : 46.2
+Numbers                          : {1615.3266220321711, 1615.8547104505574, 1623.4563962101934, 1624.8523363985266...} 
+DateTime                         : 10/30/2022 11:39:41 PM
+
+PS C:\>
+```
+
+The part `| ?{ ++$Counter % 2 -eq 0 }` is a Where-Object filter that simply filters out every other element regardless of what's in the pipeline.
+
