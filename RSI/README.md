@@ -68,7 +68,7 @@ parameter -GetSecondStep, the number of -Numbers you need is this number plus on
 (to get $SecondStepSampleCount percentages, the first calculated and used percentage 
 requires a "starting number").
 
-# Example where I get the RSI number for Ethereum prices for the last approximately 16.4 hours
+# Examples where I get the RSI number for Bitcoin and Ethereum prices
 
 Here I get the RSI value of the last 197 five-minute intervals as of the evening of 2022-10-30 (happy Halloween!).
 
@@ -178,4 +178,30 @@ PS C:\>
 ```
 
 The part `| ?{ ++$Counter % 2 -eq 0 }` is a Where-Object filter that simply filters out every other element regardless of what's in the pipeline.
+
+# Example of only RSI step one
+
+If you want only step one, it will look like this:
+
+```
+PS C:\> Get-RSI -Numbers $BitcoinPrices
+
+
+Numbers     : {20683.39087974569, 20636.932529933252, 20622.68320123975, 20610.905983715078...}
+Percentages : {-0.2246166988892162866040907400, -0.0690477069343216385629406400, -0.0571080756550825676848205400,      
+              -0.0823152848923622277390376400...}
+Gains       : {0.0271876288580736758650996400, 0.0909972287497142741226894700, 0.0047290034963246643462787700,
+              0.0933473701018659342565856200...}
+AverageGain : 0.0155862868644869
+Losses      : {-0.2246166988892162866040907400, -0.0690477069343216385629406400, -0.0571080756550825676848205400,      
+              -0.0823152848923622277390376400...}
+AverageLoss : -0.0528753152082499
+SampleCount : 14
+RSIStepOne  : 22.7664652777586
+DateTime    : 10/31/2022 12:18:49 AM
+
+PS C:\>
+```
+
+Apparently Bitcoin is heavily oversold in the last hour or so.
 
