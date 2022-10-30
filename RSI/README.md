@@ -134,7 +134,13 @@ If you want to look at periods longer back in time than the minimum ~16.4 hours 
 Example:
 
 ```
-PS C:\> $EthPrices = gci "$MyHome\coinmarketcapdata_5m\*.json" | sort-object Name | select-object -last (197*2) | %{ ((gc -raw $_.fullname) | ConvertFrom-Json).data.where({$_.slug -eq 'ethereum'}).quote.usd.price } | ?{ ++$Counter % 2 -eq 0 }
+PS C:\> $EthPrices = gci "$MyHome\coinmarketcapdata_5m\*.json" | 
+    sort-object Name | 
+    select-object -last (197*2) | 
+    %{ ((gc -raw $_.fullname) | 
+    ConvertFrom-Json).data.where({
+    $_.slug -eq 'ethereum'}).quote.usd.price
+    } | ?{ ++$Counter % 2 -eq 0 }
 PS C:\> 10/60*197 # hours back in time
 32.8333333333333
 PS C:\> $EthPrices.Count                                                                                               
