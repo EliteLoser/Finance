@@ -212,5 +212,5 @@ DateTime    : 10/31/2022 12:18:49 AM
 PS C:\>
 ```
 
-Apparently Bitcoin is heavily oversold in the last hour or so.
+Apparently Bitcoin is heavily oversold in the last hour and 15 minutes.
 
