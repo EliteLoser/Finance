@@ -179,6 +179,8 @@ PS C:\>
 
 The part `| ?{ ++$Counter % 2 -eq 0 }` is a Where-Object filter that simply filters out every other element regardless of what's in the pipeline.
 
+In this example, I sort by filename, since I know it has a timestamp that sorts chronologically also in alphabetical order (the ISO 8601 variant).
+
 # Example of only RSI step one
 
 If you want only step one, it will look like this:
