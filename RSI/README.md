@@ -216,7 +216,7 @@ Apparently, Bitcoin is heavily oversold in the last hour and 15 minutes.
 
 # Example use - phone push notifications every hour
 
-I set up a Pushover account and paid the $5 one-time fee. Then I set up some applications and keys and stuff to categorize some crypto currencies that I'm following.
+I set up a Pushover ( https://pushover.net/ ) account and paid the $5 one-time fee after the 30-day trial. Then I set up some applications and keys and stuff to categorize some crypto currencies that I'm following.
 
 The result is something like this:
 
