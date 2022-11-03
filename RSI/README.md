@@ -212,5 +212,16 @@ DateTime    : 10/31/2022 12:18:49 AM
 PS C:\>
 ```
 
-Apparently Bitcoin is heavily oversold in the last hour and 15 minutes.
+Apparently, Bitcoin is heavily oversold in the last hour and 15 minutes.
+
+# Example use - phone push notifications every hour
+
+I set up a Pushover account and paid the $5 one-time fee. Then I set up some applications and keys and stuff to categorize some crypto currencies that I'm following.
+
+The result is something like this:
+
+![crypto_bitcoin_only](/Finance/RSI/crypto_pushover_bitcoin_only_snip.jpg)
+
+![crypto_different_currencies](/Finance/RSI/crypto_pushover_different_currencies_snip.jpg)
+
 
