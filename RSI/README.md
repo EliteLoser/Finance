@@ -220,8 +220,8 @@ I set up a Pushover account and paid the $5 one-time fee. Then I set up some app
 
 The result is something like this:
 
-![crypto_bitcoin_only](/Finance/RSI/crypto_pushover_bitcoin_only_snip.jpg)
+![crypto_bitcoin_only](./crypto_pushover_bitcoin_only_snip.jpg)
 
-![crypto_different_currencies](/Finance/RSI/crypto_pushover_different_currencies_snip.jpg)
+![crypto_different_currencies](./crypto_pushover_different_currencies_snip.jpg)
 
 
