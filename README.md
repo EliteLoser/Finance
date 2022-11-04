@@ -1,7 +1,7 @@
 # Finance
 Finance stuff
 
-Click the SnP500 folder for a README.md with content.
+The SnP500 and RSI folders have their own READMEs.
 
 # Some demos of Get-PeriodicDevelopment with surrounding logic
 
