@@ -48,7 +48,7 @@ function Get-RSI {
         close rates, hourly/whatever crypto currency data, or endless other types of data.
     .PARAMETER FirstStepSampleCount
         Sets the first step sample count to be used (default 14) for calculating RSI
-        step one.
+        step one. If you want standard RSI calculations, leave this parameter out.
     
         The traditional RSI formula uses 14 data points/numbers. This parameter allows you
         to specify a different count for your RSI calculation. The number of -Numbers
@@ -61,7 +61,8 @@ function Get-RSI {
     .PARAMETER SecondStepSampleCount
         Sets the second step sample count which should be evenly divisible by $FirstStepSampleCount,
         used for calculating the second step of the RSI formula. Default 14 * 14 (14 times
-        the default $FirstStepSampleCount). 14*14 = 196.
+        the default $FirstStepSampleCount). 14*14 = 196. If you want standard RSI calculations,
+        leave this parameter out. Only in use together with -GetSecondStep. 
 
         The traditional RSI formula uses 14*14 numbers. This parameter allows you to
         specify a different count for your RSI calculation. If you provide the switch
