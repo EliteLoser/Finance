@@ -98,17 +98,25 @@ function Get-RSI {
                 [Decimal[]]$Numbers
             )
             [Bool]$FirstRun = $True
+            #Write-Verbose "`$PreviousNumber is '$PreviousNumber'. `$FirstRun is '$FirstRun'."
             $Percentages = @(foreach ($Number in $Numbers) {
                 if ($FirstRun) {
                     #$PreviousNumber = $Numbers[0]
                     [Decimal]$PreviousNumber = $Number
+                    #Write-Verbose "`$PreviousNumber is '$PreviousNumber'. `$FirstRun is '$FirstRun'."
                     $FirstRun = $False
                     continue
                 }
                 # This is returned, and collected in $Percentages.
-                ($PreviousNumber - $Number) / $PreviousNumber * -100
+                if ($PreviousNumber -eq 0) {
+                    Write-Warning "Encountered a 0 value. This number will be skipped, as division by 0 is impossible."
+                }
+                else {
+                    ($PreviousNumber - $Number) / $PreviousNumber * -100
+                }
                 $PreviousNumber = $Number
             })
+            Write-Verbose "Calculated percentages (count: $($Percentages.Count))."
             # We need to add one 0 for each loss, for the gain average,
             # and vice versa: One 0 for each gain for the loss average.
             # Ensure the variablea are arrays using @() notation,
@@ -135,7 +143,7 @@ function Get-RSI {
                 Select-Object -ExpandProperty Average
             $RsiStepOne = 100 - (100/( 1 + ( ($AverageGain/$FirstStepSampleCount) / (-1*$AverageLoss/$FirstStepSampleCount) )) )
             # Emit an object to the pipeline.
-            [PSCustomObject]@{
+            [PSCustomObject] @{
                 Numbers = $Numbers
                 Percentages = $Percentages
                 Gains = $Gains
