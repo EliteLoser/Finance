@@ -192,8 +192,8 @@ function Get-RSI {
                 Measure-Object -Average |
                 Select-Object -ExpandProperty Average
             Write-Verbose "`$PreviousXAverageGain = $PreviousXAverageGain`n`$PreviousXAverageLoss = $PreviousXAverageLoss"
-            $RsiStepTwo = 100 - (100 / (1 + (($PreviousXAverageGain * 13 + $RsiStepOnesForStepTwo.AverageGain[-1]
-                ) / (-1 * $PreviousXAverageLoss * 13 + -1 * $RsiStepOnesForStepTwo.AverageLoss[-1]))))
+            $RsiStepTwo = 100 - (100 / (1 + (($PreviousXAverageGain * ($FirstStepSampleCount-1) + $RsiStepOnesForStepTwo.AverageGain[-1]
+                ) / (-1 * $PreviousXAverageLoss * ($FirstStepSampleCount-1) + -1 * $RsiStepOnesForStepTwo.AverageLoss[-1]))))
             [PSCustomObject]@{
                 RsiStepOnesCalulationsForStepTwo = $RsiStepOnesForStepTwo
                 RsiStepOnesString = ($RsiStepOnesForStepTwo.RSIStepOne | ForEach-Object {[Math]::Round($_, 2)}) -join ' - '
