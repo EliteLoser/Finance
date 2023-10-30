@@ -305,8 +305,8 @@ function Get-PeriodicDevelopment {
         }
 
         [PSCustomObject] @{
-            UsedStartDate = $UsedStartDate
-            UsedEndDate = $UsedEndDate
+            UsedStartDate = $UsedStartDate.ToString('yyyy\-MM\-dd')
+            UsedEndDate = $UsedEndDate.ToString('yyyy\-MM\-dd')
             StartRate = $StartClose
             EndRate = $EndClose
             PercentDevelopment = [Math]::Round(((($EndClose - $StartClose) / $(
