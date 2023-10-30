@@ -307,7 +307,10 @@ function Get-PeriodicDevelopment {
         [PSCustomObject] @{
             UsedStartDate = $UsedStartDate
             UsedEndDate = $UsedEndDate
-            PercentDevelopment = [Math]::Round(((($EndClose - $StartClose) / $EndClose) * 100), 4)
+            StartRate = $StartClose
+            EndRate = $EndClose
+            PercentDevelopment = [Math]::Round(((($EndClose - $StartClose) / $(
+                if ($EndClose -ge $StartClose) {$EndClose} else {$StartClose})) * 100), 4)
         }
     }
 }
