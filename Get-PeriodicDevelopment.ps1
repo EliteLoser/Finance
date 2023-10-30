@@ -27,13 +27,13 @@ function Get-PeriodicDevelopment {
 
             2022, 2023 | %{
                 $Year = $_; 1..12 | %{
-                    Get-PeriodicDevelopment -FilePath ./NEL_CSV.csv -StartDate (
+                    Get-PeriodicDevelopment -FilePath ./NEL_CSV_no_0_turnover.csv -StartDate (
                         Get-Date -Year $Year -Month $_ -Day 1
                         ) -EndDate (
                         Get-Date -Year $Year -Month $_ -Day 26
                         ) -RateName vwap -DateReplace '(\d{4})-(\d\d)-(\d\d)', '$2/$3/$1' -LatestFirst -UpdateCsvCache
                     }
-                } | ?{0 -notin $_.StartRate,$_.EndRate} | ft -a
+                } ft -a #| ?{0 -notin $_.StartRate,$_.EndRate} | ft -a # flawed hack workaround
             
                 WARNING: End close not found for end date: 11/26/2023 22:34:04
                 WARNING: End close not found for end date: 12/26/2023 22:34:04
