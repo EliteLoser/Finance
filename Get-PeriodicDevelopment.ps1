@@ -33,7 +33,7 @@ function Get-PeriodicDevelopment {
                         Get-Date -Year $Year -Month $_ -Day 26
                         ) -RateName vwap -DateReplace '(\d{4})-(\d\d)-(\d\d)', '$2/$3/$1' -LatestFirst -UpdateCsvCache
                     }
-                } ft -a #| ?{0 -notin $_.StartRate,$_.EndRate} | ft -a # flawed hack workaround
+                } | ft -a #| ?{0 -notin $_.StartRate,$_.EndRate} | ft -a # flawed hack workaround
             
                 WARNING: End close not found for end date: 11/26/2023 22:34:04
                 WARNING: End close not found for end date: 12/26/2023 22:34:04
